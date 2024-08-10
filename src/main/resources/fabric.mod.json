@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "termc",
+	"version": "${version}",
+	"name": "terMc",
+	"description": "termilu's allrounder minecraft mod",
+	"authors": [
+		"termilu"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": "https://https://github.com/termilu/terMc"
+	},
+	"license": "MIT",
+	"icon": "assets/termc/icon.jpg",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.termilu.termc.TerMc"
+		],
+		"fabric-datagen": [
+			"net.termilu.termc.TerMcDataGenerator"
+		],
+		"client": [
+			"net.termilu.termc.terMcClient"
+		]
+	},
+	"mixins": [
+		"termc.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
