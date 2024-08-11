@@ -11,6 +11,21 @@ import net.minecraft.util.Identifier;
 import net.termilu.termc.TerMc;
 
 public class ModItemGroups {
+
+    public static final ItemGroup TERMC_GROUP = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(TerMc.MOD_ID, "termc"),
+            // Build displayName of Itemgroup
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.termc"))
+                    // Build Icon of Itemgroup
+                    .icon(() -> new ItemStack(ModItems.PINK_GARNET)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.FLUORITE);
+                        entries.add(ModItems.RAW_FLUORITE);
+                        entries.add(ModItems.PINK_GARNET);
+                        entries.add(ModItems.RAW_PINK_GARNET);
+                        // Add new Items for Itemgroup fluorite here
+
+                    }).build());
+
     public static final ItemGroup FLUORITE_GROUP = Registry.register(Registries.ITEM_GROUP,
         Identifier.of(TerMc.MOD_ID, "fluorite"),
             // Build displayName of Itemgroup

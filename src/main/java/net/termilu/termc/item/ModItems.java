@@ -12,6 +12,8 @@ public class ModItems {
     //Creating new Items
     public static final Item FLUORITE = registerItem("fluorite", new Item(new Item.Settings()));
     public static final Item RAW_FLUORITE = registerItem("raw_fluorite", new Item(new Item.Settings()));
+    public static final Item PINK_GARNET = registerItem("pink_garnet", new Item(new Item.Settings()));
+    public static final Item RAW_PINK_GARNET = registerItem("raw_pink_garnet", new Item(new Item.Settings()));
 
     //Registering item with unique identifier
     private static Item registerItem(String name, Item item){
@@ -22,6 +24,8 @@ public class ModItems {
     private static void customIngredients(FabricItemGroupEntries entries){
         entries.add(FLUORITE);
         entries.add(RAW_FLUORITE);
+        entries.add(PINK_GARNET);
+        entries.add(RAW_PINK_GARNET);
     }
 
     public static void registerModItems(){
