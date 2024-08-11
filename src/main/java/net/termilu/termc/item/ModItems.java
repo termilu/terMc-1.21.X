@@ -31,6 +31,7 @@ public class ModItems {
     public static void registerModItems(){
         TerMc.LOGGER.info("Registering Mod Items for: " + TerMc.MOD_ID);
 
+        //Add customIngredients into creative "Ingredients" Item group
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::customIngredients);
     }
 }
