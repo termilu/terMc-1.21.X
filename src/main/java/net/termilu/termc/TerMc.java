@@ -2,6 +2,8 @@ package net.termilu.termc;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.termilu.termc.item.ModItemGroups;
+import net.termilu.termc.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,6 +14,7 @@ public class TerMc implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+		ModItemGroups.registerItemGroups();
+		ModItems.registerModItems();
 	}
 }

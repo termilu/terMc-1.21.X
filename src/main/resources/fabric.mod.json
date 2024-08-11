@@ -22,7 +22,7 @@
 			"net.termilu.termc.TerMcDataGenerator"
 		],
 		"client": [
-			"net.termilu.termc.terMcClient"
+			"net.termilu.termc.TerMcClient"
 		]
 	},
 	"mixins": [
