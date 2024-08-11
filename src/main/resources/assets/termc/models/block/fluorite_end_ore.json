@@ -1,0 +1,7 @@
+{
+  "_comment": "Use 'all' texture on all 6 sides of the block",
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "termc:block/fluorite_end_ore"
+  }
+}

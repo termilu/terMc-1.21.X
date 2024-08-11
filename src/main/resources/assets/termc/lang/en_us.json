@@ -1,8 +1,16 @@
 {
   "item.termc.fluorite": "Fluorite",
   "item.termc.raw_fluorite": "Raw Fluorite",
+
+  "block.termc.fluorite_block": "Fluorite Block",
+  "block.termc.fluorite_ore": "Fluorite Ore",
+  "block.termc.fluorite_deepslate_ore": "Fluorite Deepslate Ore",
+  "block.termc.fluorite_nether_ore": "Fluorite Nether Ore",
+  "block.termc.fluorite_end_ore": "Fluorite End Ore",
+
   "item.termc.pink_garnet": "Pink Garnet",
   "item.termc.raw_pink_garnet": "Raw Pink Garnet",
+
   "itemgroup.termc":  "terMc Items",
   "itemgroup.fluorite":  "Fluorite Items",
   "itemgroup.fluorite_blocks": "Fluorite Blocks"
