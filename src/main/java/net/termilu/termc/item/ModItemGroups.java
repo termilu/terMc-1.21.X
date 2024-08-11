@@ -31,14 +31,16 @@ public class ModItemGroups {
 
                     }).build());
 
-    public static final ItemGroup FLUORITE_GROUP = Registry.register(Registries.ITEM_GROUP,
-        Identifier.of(TerMc.MOD_ID, "fluorite"),
+    public static final ItemGroup ORE_GROUP = Registry.register(Registries.ITEM_GROUP,
+        Identifier.of(TerMc.MOD_ID, "ore"),
             // Build displayName of Itemgroup
-            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.fluorite"))
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.ore"))
                     // Build Icon of Itemgroup
                     .icon(() -> new ItemStack(ModItems.FLUORITE)).entries((displayContext, entries) -> {
                         entries.add(ModItems.FLUORITE);
                         entries.add(ModItems.RAW_FLUORITE);
+                        entries.add(ModItems.PINK_GARNET);
+                        entries.add(ModItems.RAW_PINK_GARNET);
                         // Add new Items for Itemgroup fluorite here
 
                     }).build());
