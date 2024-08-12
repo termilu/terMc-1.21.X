@@ -77,7 +77,7 @@ public class ModItemGroups {
 
                     }).build());
 
-    public static final ItemGroup FOOD = Registry.register(Registries.ITEM_GROUP,
+    public static final ItemGroup FOOD_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(TerMc.MOD_ID, "food"),
             // Build displayName of Itemgroup
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.food"))
