@@ -15,8 +15,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.termilu.termc.item.ModItems;
 
-import java.util.Random;
-
 public class MagicBlock extends Block {
     public MagicBlock(Settings settings){
         super(settings);
