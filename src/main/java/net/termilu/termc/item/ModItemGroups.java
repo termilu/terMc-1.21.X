@@ -38,6 +38,9 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.MAGIC_BLOCK);
 
+                        //Food
+                        entries.add(ModItems.STRAWBERRY);
+
                         // Add new Items for Itemgroup fluorite here
 
                     }).build());
@@ -68,6 +71,17 @@ public class ModItemGroups {
                         entries.add(ModBlocks.FLUORITE_NETHER_ORE);
                         entries.add(ModBlocks.FLUORITE_END_ORE);
                         // Add new Items for Itemgroup fluorite_blocks here
+
+                    }).build());
+
+    public static final ItemGroup FOOD = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(TerMc.MOD_ID, "food"),
+            // Build displayName of Itemgroup
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.food"))
+                    // Build Icon of Itemgroup
+                    .icon(() -> new ItemStack(ModItems.STRAWBERRY)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.STRAWBERRY);
+
 
                     }).build());
 

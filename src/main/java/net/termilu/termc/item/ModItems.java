@@ -20,6 +20,9 @@ public class ModItems {
     //Custom items
     public static final Item CHAINSAW = registerItem("chainsaw", new ChainsawItem(new Item.Settings().maxDamage(64)));
 
+    //Food
+    public static final Item STRAWBERRY = registerItem("strawberry", new Item(new Item.Settings().food(ModFoodComponents.STRAWBERRY)));
+
     //Registering item with unique identifier
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, Identifier.of(TerMc.MOD_ID, name), item);

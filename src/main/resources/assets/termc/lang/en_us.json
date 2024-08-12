@@ -6,6 +6,8 @@
 
   "item.termc.chainsaw": "Chainsaw",
 
+  "item.termc.strawberry":  "Strawberry",
+
   "block.termc.fluorite_block": "Fluorite Block",
   "block.termc.fluorite_ore": "Fluorite Ore",
   "block.termc.fluorite_deepslate_ore": "Fluorite Deepslate Ore",
@@ -17,6 +19,7 @@
   "itemgroup.termc":  "terMc Items",
   "itemgroup.ore":  "Ores",
   "itemgroup.fluorite_blocks": "Fluorite Blocks",
+  "itemgroup.food":  "Food",
 
   "sounds.termc.chainsaw_cut": "Chainsaw cutting sound",
   "sounds.termc.chainsaw_pull": "Chainsaw pulling sound"
