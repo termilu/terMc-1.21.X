@@ -1,4 +1,6 @@
 {
+  "_comment": "https://minecraft.wiki/w/Formatting_codes",
+
   "item.termc.fluorite": "Fluorite",
   "item.termc.raw_fluorite": "Raw Fluorite",
   "item.termc.pink_garnet": "Pink Garnet",
@@ -24,6 +26,12 @@
   "itemgroup.food":  "Food",
 
   "sounds.termc.chainsaw_cut": "Chainsaw cutting sound",
-  "sounds.termc.chainsaw_pull": "Chainsaw pulling sound"
+  "sounds.termc.chainsaw_pull": "Chainsaw pulling sound",
 
+  "tooltip.termc.chainsaw.tooltip.shift": "Press §eShift§r for more Information",
+  "tooltip.termc.chainsaw.tooltip.1": "This §5Chainsaw§r will cut down logs and leaves instantly!",
+  "tooltip.termc.chainsaw.tooltip.2": "§5Chainsaw§r go vroom!",
+  "tooltip.termc.magic_block.tooltip.1": "Turns §5Crystals§r into §4Redstone§r or §1Lapis§r",
+  "tooltip.termc.star_fragment.tooltip.1": "It burns with the heat of a star",
+  "tooltip.termc.strawberry.tooltip.1": "A juicy snack"
 }

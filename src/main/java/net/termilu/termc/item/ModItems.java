@@ -4,11 +4,16 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.termilu.termc.TerMc;
 import net.termilu.termc.item.custom.ChainsawItem;
+
+import java.util.List;
 
 public class ModItems {
     //Creating new Items
@@ -21,10 +26,23 @@ public class ModItems {
     public static final Item CHAINSAW = registerItem("chainsaw", new ChainsawItem(new Item.Settings().maxDamage(64)));
 
     //Food
-    public static final Item STRAWBERRY = registerItem("strawberry", new Item(new Item.Settings().food(ModFoodComponents.STRAWBERRY)));
+    public static final Item STRAWBERRY = registerItem("strawberry", new Item(new Item.Settings().food(ModFoodComponents.STRAWBERRY)){
+        //anonymous class to add custom tooltips for items that don't have their own class
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.termc.strawberry.tooltip.1"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
 
     //Fuel
-    public static final Item STAR_FRAGMENT = registerItem("star_fragment", new Item(new Item.Settings()));
+    public static final Item STAR_FRAGMENT = registerItem("star_fragment", new Item(new Item.Settings()){
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.termc.star_fragment.tooltip.1"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
 
     //Registering item with unique identifier
     private static Item registerItem(String name, Item item){
