@@ -23,6 +23,9 @@ public class ModItems {
     //Food
     public static final Item STRAWBERRY = registerItem("strawberry", new Item(new Item.Settings().food(ModFoodComponents.STRAWBERRY)));
 
+    //Fuel
+    public static final Item STAR_FRAGMENT = registerItem("star_fragment", new Item(new Item.Settings()));
+
     //Registering item with unique identifier
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, Identifier.of(TerMc.MOD_ID, name), item);

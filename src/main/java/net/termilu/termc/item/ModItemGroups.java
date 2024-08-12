@@ -41,6 +41,9 @@ public class ModItemGroups {
                         //Food
                         entries.add(ModItems.STRAWBERRY);
 
+                        //Fuel
+                        entries.add(ModItems.STAR_FRAGMENT);
+
                         // Add new Items for Itemgroup fluorite here
 
                     }).build());
