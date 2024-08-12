@@ -37,11 +37,9 @@ public class MagicBlock extends Block {
             //Turn into Redstone dust at day
             if(isValidItem(item.getStack()) && world.getTimeOfDay() % 24000 < 13000){                                   //24000 ticks per day
                 item.setStack(new ItemStack(Items.REDSTONE, item.getStack().getCount()));                               //Morning starts at 0 ticks
-                System.out.println("It is day. Time: " + world.getTimeOfDay());
                 //Turn into Lapis at Night
             }else if(isValidItem(item.getStack()) && world.getTimeOfDay() % 24000 >= 13000){                            //Night starts at 13000 ticks
                     item.setStack(new ItemStack(Items.LAPIS_LAZULI, item.getStack().getCount()));
-                System.out.println("It is night. Time: " + world.getTimeOfDay());
             }
 
 /*          Cant use world.isDay() or .isNight() because ambientDarkness sometimes switches to 0 even during night.
