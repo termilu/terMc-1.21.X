@@ -1,6 +1,10 @@
 {
   "item.termc.fluorite": "Fluorite",
   "item.termc.raw_fluorite": "Raw Fluorite",
+  "item.termc.pink_garnet": "Pink Garnet",
+  "item.termc.raw_pink_garnet": "Raw Pink Garnet",
+
+  "item.termc.chainsaw": "Chainsaw",
 
   "block.termc.fluorite_block": "Fluorite Block",
   "block.termc.fluorite_ore": "Fluorite Ore",
@@ -8,10 +12,13 @@
   "block.termc.fluorite_nether_ore": "Fluorite Nether Ore",
   "block.termc.fluorite_end_ore": "Fluorite End Ore",
 
-  "item.termc.pink_garnet": "Pink Garnet",
-  "item.termc.raw_pink_garnet": "Raw Pink Garnet",
+  "block.termc.magic_block": "Magic Block",
 
   "itemgroup.termc":  "terMc Items",
   "itemgroup.ore":  "Ores",
-  "itemgroup.fluorite_blocks": "Fluorite Blocks"
+  "itemgroup.fluorite_blocks": "Fluorite Blocks",
+
+  "sounds.termc.chainsaw_cut": "Chainsaw cutting sound",
+  "sounds.termc.chainsaw_pull": "Chainsaw pulling sound"
+
 }

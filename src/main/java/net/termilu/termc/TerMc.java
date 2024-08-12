@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.termilu.termc.block.ModBlocks;
 import net.termilu.termc.item.ModItemGroups;
 import net.termilu.termc.item.ModItems;
+import net.termilu.termc.sound.ModSounds;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,5 +19,6 @@ public class TerMc implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+		ModSounds.registerSounds();
 	}
 }

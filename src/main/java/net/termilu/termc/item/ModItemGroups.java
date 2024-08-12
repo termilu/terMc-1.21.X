@@ -18,15 +18,26 @@ public class ModItemGroups {
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.termc"))
                     // Build Icon of Itemgroup
                     .icon(() -> new ItemStack(ModItems.PINK_GARNET)).entries((displayContext, entries) -> {
+                        //Items
                         entries.add(ModItems.FLUORITE);
                         entries.add(ModItems.RAW_FLUORITE);
                         entries.add(ModItems.PINK_GARNET);
                         entries.add(ModItems.RAW_PINK_GARNET);
+
+                        //Custom items
+                        entries.add(ModItems.CHAINSAW);
+
+                        //Blocks
                         entries.add(ModBlocks.FLUORITE_BLOCK);
                         entries.add(ModBlocks.FLUORITE_ORE);
                         entries.add(ModBlocks.FLUORITE_DEEPSLATE_ORE);
                         entries.add(ModBlocks.FLUORITE_NETHER_ORE);
                         entries.add(ModBlocks.FLUORITE_END_ORE);
+
+                        //Custom blocks
+
+                        entries.add(ModBlocks.MAGIC_BLOCK);
+
                         // Add new Items for Itemgroup fluorite here
 
                     }).build());
