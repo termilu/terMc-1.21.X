@@ -14,6 +14,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.termilu.termc.TerMc;
+import net.termilu.termc.block.custom.MagicBlock;
 
 public class ModBlocks {
 
@@ -52,6 +53,13 @@ public class ModBlocks {
                             .sounds(BlockSoundGroup.STONE)
                             .strength(4f)
                             .requiresTool()));
+
+    //Custom blocks
+
+    public static final Block MAGIC_BLOCK = registerBlock("magic_block",
+            new MagicBlock(AbstractBlock.Settings.create()
+                    .strength(1f)
+                    .requiresTool()));
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);
