@@ -8,6 +8,8 @@ import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.util.Identifier;
+import net.termilu.termc.TerMc;
 import net.termilu.termc.block.ModBlocks;
 import net.termilu.termc.item.ModItems;
 
@@ -45,7 +47,23 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 //Unlock recipe in recipe book if you pick up either of these items
                 .criterion(hasItem(ModItems.FLUORITE), conditionsFromItem(ModItems.FLUORITE))
                 .criterion(hasItem(Items.REDSTONE), conditionsFromItem(Items.REDSTONE))
+                //One recipe for the item
                 .offerTo(exporter);
+
+        //Multiple recipes for same Item
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.MAGIC_BLOCK)
+                //Recipe
+                .pattern("FFF")
+                .pattern("FLF")
+                .pattern("FFF")
+                //Define input patternStr
+                .input('F', ModItems.FLUORITE)
+                .input('L', Items.LAPIS_LAZULI)
+                //Unlock recipe in recipe book if you pick up either of these items
+                .criterion(hasItem(ModItems.FLUORITE), conditionsFromItem(ModItems.FLUORITE))
+                .criterion(hasItem(Items.REDSTONE), conditionsFromItem(Items.REDSTONE))
+                //Multiple recipes for the same Item
+                .offerTo(exporter, Identifier.of(TerMc.MOD_ID, "magic_block_2"));
 
     }
 }

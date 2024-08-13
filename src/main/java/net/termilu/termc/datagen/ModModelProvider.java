@@ -30,6 +30,8 @@ public class ModModelProvider extends FabricModelProvider {
         //Materials
         itemModelGenerator.register(ModItems.FLUORITE, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_FLUORITE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PINK_GARNET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAW_PINK_GARNET, Models.GENERATED);
 
         //Tools
         itemModelGenerator.register(ModItems.CHAINSAW, Models.GENERATED);
