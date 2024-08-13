@@ -1,7 +1,16 @@
-// 1.21	2024-08-13T05:32:32.3875154	terMc/Block Loot Tables
+// 1.21	2024-08-13T19:29:59.3315515	terMc/Block Loot Tables
+e2b5e007046dcff2c4ab4090a011f2b65ef72395 data\termc\loot_table\blocks\fluorite_stairs.json
 1b35117591a0cd8ee24268ef1ef27be3e409711e data\termc\loot_table\blocks\magic_block.json
+6f009941af825966514be58d451b1d6bba19d39b data\termc\loot_table\blocks\fluorite_trapdoor.json
+9b5d85c792fe2f2cc7c624b94357266e9f104a64 data\termc\loot_table\blocks\fluorite_slab.json
 540e460f35fcb32d1024e3b7f8f2c21e943576ff data\termc\loot_table\blocks\fluorite_nether_ore.json
+4b81fc6bc758538fe34b3aa4b159f8bc4fc2189c data\termc\loot_table\blocks\fluorite_fence_gate.json
+5bc9d323db9c405ccf37cab8b525ef67af55194c data\termc\loot_table\blocks\fluorite_door.json
+6af48e4914b8df413ed285a9454db604e9195d23 data\termc\loot_table\blocks\fluorite_wall.json
+5cf03fe820582ac57300e57dd382f5acf48b0dac data\termc\loot_table\blocks\fluorite_button.json
 9ad4eca20e651540920d9326917f827d7b1f34ea data\termc\loot_table\blocks\fluorite_block.json
 396586a8cf97201b33e809a53dea8a39fafef007 data\termc\loot_table\blocks\fluorite_ore.json
+7d14c13a0c130c52b629f48e0dc061b1b42967c9 data\termc\loot_table\blocks\fluorite_fence.json
 a89d884cf8d0cd85f651f4fa9a475a129e66678a data\termc\loot_table\blocks\fluorite_deepslate_ore.json
+b89b57f1a76413147befa4bcbebe255c0a096e41 data\termc\loot_table\blocks\fluorite_pressure_plate.json
 38c75974fef0267d0a80f2dae91aac717a854700 data\termc\loot_table\blocks\fluorite_end_ore.json

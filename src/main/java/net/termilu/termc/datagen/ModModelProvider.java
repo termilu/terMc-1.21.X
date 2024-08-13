@@ -15,13 +15,32 @@ public class ModModelProvider extends FabricModelProvider {
     //Generate Mod Blockstates & Blockmodels jsons automatically
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FLUORITE_BLOCK);
+        //Generate Block and variants like stairs and slab if provided below
+        BlockStateModelGenerator.BlockTexturePool fluoriteTexturePool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.FLUORITE_BLOCK);
+
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FLUORITE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FLUORITE_DEEPSLATE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FLUORITE_NETHER_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FLUORITE_END_ORE);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MAGIC_BLOCK);
+
+        //Generate derivables
+        fluoriteTexturePool.stairs(ModBlocks.FLUORITE_STAIRS);
+        fluoriteTexturePool.slab(ModBlocks.FLUORITE_SLAB);
+        fluoriteTexturePool.button(ModBlocks.FLUORITE_BUTTON);
+        fluoriteTexturePool.pressurePlate(ModBlocks.FLUORITE_PRESSURE_PLATE);
+
+        //Fences, Fence gates and Walls need a custom BlockTag otherwise they won't connect
+        fluoriteTexturePool.fence(ModBlocks.FLUORITE_FENCE);
+        fluoriteTexturePool.fenceGate(ModBlocks.FLUORITE_FENCE_GATE);
+        fluoriteTexturePool.wall(ModBlocks.FLUORITE_WALL);
+
+        //Doors & Trapdoors
+        blockStateModelGenerator.registerDoor(ModBlocks.FLUORITE_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.FLUORITE_TRAPDOOR);
+
     }
 
     //Generate Mod Item models jsons

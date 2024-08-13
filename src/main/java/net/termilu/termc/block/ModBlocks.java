@@ -2,9 +2,7 @@ package net.termilu.termc.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.ExperienceDroppingBlock;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -54,8 +52,57 @@ public class ModBlocks {
                             .strength(4f)
                             .requiresTool()));
 
-    //Custom blocks
+    //Stairs
+    public static final Block FLUORITE_STAIRS = registerBlock("fluorite_stairs",
+            new StairsBlock(ModBlocks.FLUORITE_BLOCK.getDefaultState(),
+                    AbstractBlock.Settings.create().strength(2f)
+                            .sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool()));
 
+    //Slab doesnt need defaultState
+    public static final Block FLUORITE_SLAB = registerBlock("fluorite_slab",
+            new SlabBlock(AbstractBlock.Settings.create().strength(2f)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool()));
+
+    //Buttons
+    public static final Block FLUORITE_BUTTON = registerBlock("fluorite_button",
+            new ButtonBlock(BlockSetType.IRON, 10, AbstractBlock.Settings.create()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool()));
+
+    //Pressure Plate
+    public static final Block FLUORITE_PRESSURE_PLATE = registerBlock("fluorite_pressure_plate",
+            new PressurePlateBlock(BlockSetType.IRON, AbstractBlock.Settings.create()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool()));
+
+    //Fence & Walls
+    public static final Block FLUORITE_FENCE = registerBlock("fluorite_fence",
+            new FenceBlock(AbstractBlock.Settings.create()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool()));
+
+    public static final Block FLUORITE_FENCE_GATE = registerBlock("fluorite_fence_gate",
+            new FenceGateBlock(WoodType.OAK, AbstractBlock.Settings.create()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool()));
+
+    public static final Block FLUORITE_WALL = registerBlock("fluorite_wall",
+            new WallBlock(AbstractBlock.Settings.create()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool()));
+
+    //Doors & Trapdoors IMPORTANT: also add cutouts in TerMcClient
+    public static final Block FLUORITE_DOOR = registerBlock("fluorite_door",
+            //BlockSetType.IRON => cant open with hand
+            new DoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool()
+                    //.nonOpaque to prevent xray bug with doors & trapdoors
+                    .nonOpaque()));
+
+    public static final Block FLUORITE_TRAPDOOR = registerBlock("fluorite_trapdoor",
+            //BlockSetType.IRON => cant open with hand
+            new TrapdoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool()
+                    //.nonOpaque to prevent xray bug with doors & trapdoors
+                    .nonOpaque()));
+
+
+    //Custom blocks
     public static final Block MAGIC_BLOCK = registerBlock("magic_block",
             new MagicBlock(AbstractBlock.Settings.create()
                     .strength(1f)
