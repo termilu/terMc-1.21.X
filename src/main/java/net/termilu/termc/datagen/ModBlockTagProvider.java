@@ -24,7 +24,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.FLUORITE_NETHER_ORE,
                         ModBlocks.FLUORITE_END_ORE,
                         ModBlocks.FLUORITE_STAIRS,
-                        ModBlocks.FLUORITE_SLAB);
+                        ModBlocks.FLUORITE_SLAB,
+                        ModBlocks.FLUORITE_BUTTON,
+                        ModBlocks.FLUORITE_PRESSURE_PLATE,
+                        ModBlocks.FLUORITE_FENCE,
+                        ModBlocks.FLUORITE_FENCE_GATE,
+                        ModBlocks.FLUORITE_WALL,
+                        ModBlocks.FLUORITE_DOOR,
+                        ModBlocks.FLUORITE_TRAPDOOR);
 
         //Generate needs_iron_tool.json
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
@@ -34,7 +41,20 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.FLUORITE_NETHER_ORE,
                         ModBlocks.FLUORITE_END_ORE,
                         ModBlocks.FLUORITE_STAIRS,
-                        ModBlocks.FLUORITE_SLAB);
+                        ModBlocks.FLUORITE_SLAB,
+                        ModBlocks.FLUORITE_BUTTON,
+                        ModBlocks.FLUORITE_PRESSURE_PLATE,
+                        ModBlocks.FLUORITE_FENCE,
+                        ModBlocks.FLUORITE_FENCE_GATE,
+                        ModBlocks.FLUORITE_WALL,
+                        ModBlocks.FLUORITE_DOOR,
+                        ModBlocks.FLUORITE_TRAPDOOR);
 
+        //Fences, Fence gates and Walls need a custom BlockTag otherwise they won't connect
+        //BlockTags.WOODEN_FENCES to connect with wooden fences
+        //BlockTags.FENCES to connect with non-wooden fences
+        getOrCreateTagBuilder(BlockTags.FENCES).add(ModBlocks.FLUORITE_FENCE);
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES).add(ModBlocks.FLUORITE_FENCE_GATE);
+        getOrCreateTagBuilder(BlockTags.WALLS).add(ModBlocks.FLUORITE_WALL);
     }
 }

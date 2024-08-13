@@ -22,6 +22,14 @@
 
   "block.termc.fluorite_stairs": "Fluorite Stairs",
   "block.termc.fluorite_slab": "Fluorite Slab",
+  "block.termc.fluorite_button": "Fluorite Button",
+  "block.termc.fluorite_pressure_plate": "Fluorite Pressure Plate",
+
+  "block.termc.fluorite_fence": "Fluorite Fence",
+  "block.termc.fluorite_fence_gate": "Fluorite Fence Gate",
+  "block.termc.fluorite_wall": "Fluorite Wall",
+  "block.termc.fluorite_door": "Fluorite Door",
+  "block.termc.fluorite_trapdoor": "Fluorite Trapdoor",
 
   "itemgroup.termc":  "terMc Items",
   "itemgroup.ore":  "Ores",

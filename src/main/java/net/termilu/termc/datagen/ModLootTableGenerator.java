@@ -29,8 +29,19 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.FLUORITE_BLOCK);
         addDrop(ModBlocks.MAGIC_BLOCK);
         addDrop(ModBlocks.FLUORITE_STAIRS);
-        //Slabs need extra slabDrops1
+
+        //Double-Blocks need extra typeDrops otherwise they drop twice
         addDrop(ModBlocks.FLUORITE_SLAB, slabDrops(ModBlocks.FLUORITE_SLAB));
+        addDrop(ModBlocks.FLUORITE_DOOR, doorDrops(ModBlocks.FLUORITE_DOOR));
+
+        addDrop(ModBlocks.FLUORITE_TRAPDOOR);
+        addDrop(ModBlocks.FLUORITE_BUTTON);
+        addDrop(ModBlocks.FLUORITE_PRESSURE_PLATE);
+
+        addDrop(ModBlocks.FLUORITE_FENCE);
+        addDrop(ModBlocks.FLUORITE_FENCE_GATE);
+        addDrop(ModBlocks.FLUORITE_WALL);
+
 
         //Generate ore drops when mined, oreDrops(withSilkTouch, withoutSilkTouch)
         //                               multipleOreDrops(withSilkTouch, withoutSilkTouch, minDrops, maxDrops)

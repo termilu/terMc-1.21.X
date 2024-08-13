@@ -6,6 +6,13 @@
     "termc:fluorite_nether_ore",
     "termc:fluorite_end_ore",
     "termc:fluorite_stairs",
-    "termc:fluorite_slab"
+    "termc:fluorite_slab",
+    "termc:fluorite_button",
+    "termc:fluorite_pressure_plate",
+    "termc:fluorite_fence",
+    "termc:fluorite_fence_gate",
+    "termc:fluorite_wall",
+    "termc:fluorite_door",
+    "termc:fluorite_trapdoor"
   ]
 }

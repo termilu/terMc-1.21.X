@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_right",
+  "textures": {
+    "bottom": "termc:block/fluorite_door_bottom",
+    "top": "termc:block/fluorite_door_top"
+  }
+}

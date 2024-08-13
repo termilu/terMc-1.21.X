@@ -37,6 +37,10 @@ public class ModItemGroups {
                         entries.add(ModBlocks.FLUORITE_STAIRS);
                         entries.add(ModBlocks.FLUORITE_SLAB);
 
+                        //Redstone
+                        entries.add(ModBlocks.FLUORITE_BUTTON);
+                        entries.add(ModBlocks.FLUORITE_PRESSURE_PLATE);
+
                         //Custom blocks
 
                         entries.add(ModBlocks.MAGIC_BLOCK);
@@ -78,8 +82,19 @@ public class ModItemGroups {
                     // Build Icon of Itemgroup
                     .icon(() -> new ItemStack(ModBlocks.FLUORITE_BLOCK)).entries((displayContext, entries) -> {
                         entries.add(ModBlocks.FLUORITE_BLOCK);
+
                         entries.add(ModBlocks.FLUORITE_STAIRS);
                         entries.add(ModBlocks.FLUORITE_SLAB);
+
+                        entries.add(ModBlocks.FLUORITE_BUTTON);
+                        entries.add(ModBlocks.FLUORITE_PRESSURE_PLATE);
+
+                        entries.add(ModBlocks.FLUORITE_FENCE);
+                        entries.add(ModBlocks.FLUORITE_FENCE_GATE);
+                        entries.add(ModBlocks.FLUORITE_WALL);
+
+                        entries.add(ModBlocks.FLUORITE_DOOR);
+                        entries.add(ModBlocks.FLUORITE_TRAPDOOR);
 
                         // Add new Items for Itemgroup fluorite_blocks here
 

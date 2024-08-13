@@ -63,8 +63,46 @@ public class ModBlocks {
             new SlabBlock(AbstractBlock.Settings.create().strength(2f)
                     .sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool()));
 
-    //Custom blocks
+    //Buttons
+    public static final Block FLUORITE_BUTTON = registerBlock("fluorite_button",
+            new ButtonBlock(BlockSetType.IRON, 10, AbstractBlock.Settings.create()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool()));
 
+    //Pressure Plate
+    public static final Block FLUORITE_PRESSURE_PLATE = registerBlock("fluorite_pressure_plate",
+            new PressurePlateBlock(BlockSetType.IRON, AbstractBlock.Settings.create()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool()));
+
+    //Fence & Walls
+    public static final Block FLUORITE_FENCE = registerBlock("fluorite_fence",
+            new FenceBlock(AbstractBlock.Settings.create()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool()));
+
+    public static final Block FLUORITE_FENCE_GATE = registerBlock("fluorite_fence_gate",
+            new FenceGateBlock(WoodType.OAK, AbstractBlock.Settings.create()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool()));
+
+    public static final Block FLUORITE_WALL = registerBlock("fluorite_wall",
+            new WallBlock(AbstractBlock.Settings.create()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool()));
+
+    //Doors & Trapdoors IMPORTANT: also add cutouts in TerMcClient
+    public static final Block FLUORITE_DOOR = registerBlock("fluorite_door",
+            //BlockSetType.IRON => cant open with hand
+            new DoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool()
+                    //.nonOpaque to prevent xray bug with doors & trapdoors
+                    .nonOpaque()));
+
+    public static final Block FLUORITE_TRAPDOOR = registerBlock("fluorite_trapdoor",
+            //BlockSetType.IRON => cant open with hand
+            new TrapdoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool()
+                    //.nonOpaque to prevent xray bug with doors & trapdoors
+                    .nonOpaque()));
+
+
+    //Custom blocks
     public static final Block MAGIC_BLOCK = registerBlock("magic_block",
             new MagicBlock(AbstractBlock.Settings.create()
                     .strength(1f)
