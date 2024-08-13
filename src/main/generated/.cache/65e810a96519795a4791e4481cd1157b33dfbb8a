@@ -1,5 +1,7 @@
-// 1.21	2024-08-13T05:32:32.3875154	terMc/Block Loot Tables
+// 1.21	2024-08-13T18:32:07.8426654	terMc/Block Loot Tables
+e2b5e007046dcff2c4ab4090a011f2b65ef72395 data\termc\loot_table\blocks\fluorite_stairs.json
 1b35117591a0cd8ee24268ef1ef27be3e409711e data\termc\loot_table\blocks\magic_block.json
+9b5d85c792fe2f2cc7c624b94357266e9f104a64 data\termc\loot_table\blocks\fluorite_slab.json
 540e460f35fcb32d1024e3b7f8f2c21e943576ff data\termc\loot_table\blocks\fluorite_nether_ore.json
 9ad4eca20e651540920d9326917f827d7b1f34ea data\termc\loot_table\blocks\fluorite_block.json
 396586a8cf97201b33e809a53dea8a39fafef007 data\termc\loot_table\blocks\fluorite_ore.json

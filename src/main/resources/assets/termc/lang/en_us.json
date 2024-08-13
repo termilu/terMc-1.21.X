@@ -20,10 +20,14 @@
 
   "block.termc.magic_block": "Magic Block",
 
+  "block.termc.fluorite_stairs": "Fluorite Stairs",
+  "block.termc.fluorite_slab": "Fluorite Slab",
+
   "itemgroup.termc":  "terMc Items",
   "itemgroup.ore":  "Ores",
   "itemgroup.fluorite_blocks": "Fluorite Blocks",
   "itemgroup.food":  "Food",
+  "itemgroup.tools": "Tools",
 
   "sounds.termc.chainsaw_cut": "Chainsaw cutting sound",
   "sounds.termc.chainsaw_pull": "Chainsaw pulling sound",

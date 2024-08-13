@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "termc:block/fluorite_slab"
+    },
+    "type=double": {
+      "model": "termc:block/fluorite_block"
+    },
+    "type=top": {
+      "model": "termc:block/fluorite_slab_top"
+    }
+  }
+}
