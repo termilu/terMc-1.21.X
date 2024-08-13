@@ -35,7 +35,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         //Generate the 3x3 item -> block crafting recipe AND the Block -> 9 Item recipe
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.FLUORITE, RecipeCategory.DECORATIONS, ModBlocks.FLUORITE_BLOCK);
 
-        //Generate Shaped recipe
+        //Generate Shaped recipe for Magic Block
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.MAGIC_BLOCK)
                 //Recipe
                 .pattern("FFF")
@@ -64,6 +64,93 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(Items.REDSTONE), conditionsFromItem(Items.REDSTONE))
                 //Multiple recipes for the same Item
                 .offerTo(exporter, Identifier.of(TerMc.MOD_ID, "magic_block_2"));
+
+        //Tools
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.FLUORITE_SWORD)
+                //Recipe
+                .pattern("F")
+                .pattern("F")
+                .pattern("S")
+                //Define input patternStr
+                .input('F', ModItems.FLUORITE)
+                .input('S', Items.STICK)
+                //Unlock recipe in recipe book if you pick up this items
+                .criterion(hasItem(ModItems.FLUORITE), conditionsFromItem(ModItems.FLUORITE))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.FLUORITE_PICKAXE)
+                //Recipe
+                .pattern("FFF")
+                .pattern(" S ")
+                .pattern(" S ")
+                //Define input patternStr
+                .input('F', ModItems.FLUORITE)
+                .input('S', Items.STICK)
+                //Unlock recipe in recipe book if you pick up this items
+                .criterion(hasItem(ModItems.FLUORITE), conditionsFromItem(ModItems.FLUORITE))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.FLUORITE_AXE)
+                //Recipe
+                .pattern("FF")
+                .pattern("SF")
+                .pattern("S ")
+                //Define input patternStr
+                .input('F', ModItems.FLUORITE)
+                .input('S', Items.STICK)
+                //Unlock recipe in recipe book if you pick up this items
+                .criterion(hasItem(ModItems.FLUORITE), conditionsFromItem(ModItems.FLUORITE))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.FLUORITE_AXE)
+                //Recipe
+                .pattern("FF")
+                .pattern("FS")
+                .pattern(" S")
+                //Define input patternStr
+                .input('F', ModItems.FLUORITE)
+                .input('S', Items.STICK)
+                //Unlock recipe in recipe book if you pick up either of these items
+                .criterion(hasItem(ModItems.FLUORITE), conditionsFromItem(ModItems.FLUORITE))
+                //Multiple recipes for the same Item
+                .offerTo(exporter, Identifier.of(TerMc.MOD_ID, "fluorite_axe_2"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.FLUORITE_SHOVEL)
+                //Recipe
+                .pattern("F")
+                .pattern("S")
+                .pattern("S")
+                //Define input patternStr
+                .input('F', ModItems.FLUORITE)
+                .input('S', Items.STICK)
+                //Unlock recipe in recipe book if you pick up this items
+                .criterion(hasItem(ModItems.FLUORITE), conditionsFromItem(ModItems.FLUORITE))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.FLUORITE_HOE)
+                //Recipe
+                .pattern("FF")
+                .pattern("S ")
+                .pattern("S ")
+                //Define input patternStr
+                .input('F', ModItems.FLUORITE)
+                .input('S', Items.STICK)
+                //Unlock recipe in recipe book if you pick up this items
+                .criterion(hasItem(ModItems.FLUORITE), conditionsFromItem(ModItems.FLUORITE))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.FLUORITE_HOE)
+                //Recipe
+                .pattern("FF")
+                .pattern(" S")
+                .pattern(" S")
+                //Define input patternStr
+                .input('F', ModItems.FLUORITE)
+                .input('S', Items.STICK)
+                //Unlock recipe in recipe book if you pick up either of these items
+                .criterion(hasItem(ModItems.FLUORITE), conditionsFromItem(ModItems.FLUORITE))
+                //Multiple recipes for the same Item
+                .offerTo(exporter, Identifier.of(TerMc.MOD_ID, "fluorite_hoe_2"));
 
     }
 }

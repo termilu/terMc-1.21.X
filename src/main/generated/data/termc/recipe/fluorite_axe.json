@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "F": {
+      "item": "termc:fluorite"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "FF",
+    "SF",
+    "S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "termc:fluorite_axe"
+  }
+}

@@ -27,6 +27,13 @@ public class ModItemGroups {
                         //Custom items
                         entries.add(ModItems.CHAINSAW);
 
+                        //Tools
+                        entries.add(ModItems.FLUORITE_SWORD);
+                        entries.add(ModItems.FLUORITE_PICKAXE);
+                        entries.add(ModItems.FLUORITE_AXE);
+                        entries.add(ModItems.FLUORITE_SHOVEL);
+                        entries.add(ModItems.FLUORITE_HOE);
+
                         //Blocks
                         entries.add(ModBlocks.FLUORITE_BLOCK);
                         entries.add(ModBlocks.FLUORITE_ORE);
@@ -107,6 +114,12 @@ public class ModItemGroups {
                     // Build Icon of Itemgroup
                     .icon(() -> new ItemStack(ModItems.CHAINSAW)).entries((displayContext, entries) -> {
                         entries.add(ModItems.CHAINSAW);
+
+                        entries.add(ModItems.FLUORITE_SWORD);
+                        entries.add(ModItems.FLUORITE_PICKAXE);
+                        entries.add(ModItems.FLUORITE_AXE);
+                        entries.add(ModItems.FLUORITE_SHOVEL);
+                        entries.add(ModItems.FLUORITE_HOE);
 
                         // Add new Items for Itemgroup fluorite_blocks here
 
