@@ -16,7 +16,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.termilu.termc.item.ModItems;
+import net.termilu.termc.util.ModTags;
 
 import java.util.List;
 
@@ -66,7 +66,8 @@ public class MagicBlock extends Block {
 
     //Valid items: Fluorite, Amethyst Shard
     private boolean isValidItem(ItemStack stack) {
-        return stack.getItem() == ModItems.FLUORITE || stack.getItem() == Items.AMETHYST_SHARD;
+        //custom tag for transformable items
+        return stack.isIn(ModTags.Items.TRANSFORMABLE_ITEMS);
     }
 
     @Override
