@@ -17,7 +17,7 @@ public class ModItemGroups {
             // Build displayName of Itemgroup
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.termc"))
                     // Build Icon of Itemgroup
-                    .icon(() -> new ItemStack(ModItems.PINK_GARNET)).entries((displayContext, entries) -> {
+                    .icon(() -> new ItemStack(ModItems.CHAINSAW)).entries((displayContext, entries) -> {
                         //Items
                         entries.add(ModItems.FLUORITE);
                         entries.add(ModItems.RAW_FLUORITE);

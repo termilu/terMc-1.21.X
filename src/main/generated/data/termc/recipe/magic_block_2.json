@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "termc:fluorite"
+    },
+    "L": {
+      "item": "minecraft:lapis_lazuli"
+    }
+  },
+  "pattern": [
+    "FFF",
+    "FLF",
+    "FFF"
+  ],
+  "result": {
+    "count": 1,
+    "id": "termc:magic_block"
+  }
+}
