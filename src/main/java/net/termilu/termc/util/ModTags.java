@@ -11,6 +11,8 @@ public class ModTags {
     public static class Blocks{
         //Custom Block Tags
 
+        public static final TagKey<Block> NEEDS_FLUORITE_TOOL = createTag("needs_fluorite_tool");
+        public static final TagKey<Block> INCORRECT_FOR_FLUORITE_TOOL = createTag("incorrect_for_fluorite_tool");
 
         private static TagKey<Block> createTag(String name){
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(TerMc.MOD_ID, name));

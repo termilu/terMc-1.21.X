@@ -2,9 +2,7 @@ package net.termilu.termc.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -16,6 +14,18 @@ import net.termilu.termc.item.custom.ChainsawItem;
 import java.util.List;
 
 public class ModItems {
+    private static final int swordBaseAttackDamage = 3;
+    private static final float swordBaseAttackSpeed = -2.4f;
+    private static final int pickaxeBaseAttackDamage = 1;
+    private static final float pickaxeBaseAttackSpeed = -2.8f;
+    private static final float shovelBaseAttackDamage = 1.5f;
+    private static final float shovelBaseAttackSpeed = -3.0f;
+    private static final int axeBaseAttackDamage = 6;
+    private static final float axeBaseAttackSpeed = -3.2f;
+    private static final int hoeBaseAttackDamage = 0;
+    private static final float hoeBaseAttackSpeed = -3.0f;
+
+
     //Creating new Items
     public static final Item FLUORITE = registerItem("fluorite", new Item(new Item.Settings()));
     public static final Item RAW_FLUORITE = registerItem("raw_fluorite", new Item(new Item.Settings()));
@@ -43,6 +53,35 @@ public class ModItems {
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
+
+    //Tools
+    public static final Item FLUORITE_SWORD = registerItem("fluorite_sword",
+            new SwordItem(ModToolMaterials.FLUORITE,
+                    new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.FLUORITE,
+                            //Sword baseAttackDamage always 3, baseAttackSpeed always -2.4f
+                            swordBaseAttackDamage, swordBaseAttackSpeed))));
+
+    public static final Item FLUORITE_PICKAXE = registerItem("fluorite_pickaxe",
+            new PickaxeItem(ModToolMaterials.FLUORITE,
+                    new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(
+                            //Pickaxe default default 1 baseAttackDamage, -2.8f attackSpeed
+                            ModToolMaterials.FLUORITE, pickaxeBaseAttackDamage, pickaxeBaseAttackSpeed))));
+
+    public static final Item FLUORITE_SHOVEL = registerItem("fluorite_shovel",
+            new ShovelItem(ModToolMaterials.FLUORITE,
+                    new Item.Settings().attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.FLUORITE,
+                            shovelBaseAttackDamage, shovelBaseAttackSpeed))));
+
+    public static final Item FLUORITE_AXE = registerItem("fluorite_axe",
+            new AxeItem(ModToolMaterials.FLUORITE,
+                    new Item.Settings().attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.FLUORITE,
+                            axeBaseAttackDamage, axeBaseAttackSpeed))));
+
+    public static final Item FLUORITE_HOE = registerItem("fluorite_hoe",
+            new HoeItem(ModToolMaterials.FLUORITE,
+                    new Item.Settings().attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.FLUORITE,
+                            hoeBaseAttackDamage, hoeBaseAttackSpeed))));
+
 
     //Registering item with unique identifier
     private static Item registerItem(String name, Item item){
