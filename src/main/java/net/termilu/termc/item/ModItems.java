@@ -10,6 +10,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.termilu.termc.TerMc;
 import net.termilu.termc.item.custom.ChainsawItem;
+import net.termilu.termc.item.custom.MultiToolItem;
 
 import java.util.List;
 
@@ -82,6 +83,10 @@ public class ModItems {
                     new Item.Settings().attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.FLUORITE,
                             hoeBaseAttackDamage, hoeBaseAttackSpeed))));
 
+    public static final Item FLUORITE_MULTITOOL = registerItem("fluorite_multitool",
+            new MultiToolItem(ModToolMaterials.FLUORITE,
+                    new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(
+                            ModToolMaterials.FLUORITE, 6, -3f))));
 
     //Registering item with unique identifier
     private static Item registerItem(String name, Item item){
