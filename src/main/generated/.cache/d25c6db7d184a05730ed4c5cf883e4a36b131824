@@ -1,4 +1,4 @@
-// 1.21	2024-08-16T08:41:13.9382953	terMc/Model Definitions
+// 1.21	2024-08-16T09:33:21.4086174	terMc/Model Definitions
 0fb1fbd85516f84f4f2184e406bd72f77d438cf2 assets\termc\models\block\magic_block.json
 bcf854e2aece106ca796a0b31f3db6b2b71d819c assets\termc\models\item\raw_fluorite.json
 8a6044a61004a75a9eb7e97027c27d85cb7a4d96 assets\termc\models\item\magic_block.json
@@ -21,8 +21,8 @@ f625b351e3f38fa3fba5fa73b3d150a4109d6d1d assets\termc\models\block\lapis_wall_to
 4f38932a1f494afa28abfc00bb3ea985ff3f7fcf assets\termc\models\item\fluorite_multitool.json
 e703a9f4a098716c235a6d5fdfd8d594d1e9a832 assets\termc\models\item\fluorite_pressure_plate.json
 3346e5e28881d678792803336c46fe12f916ea71 assets\termc\blockstates\fluorite_nether_ore.json
-7c7776d76e563b9d9c4d6b20503472e9d64bd7d9 assets\termc\models\item\fluorite_axe.json
 c2ef76a3e8566300f7165cbe496b53adc933c2bd assets\termc\models\block\fluorite_slab_top.json
+7c7776d76e563b9d9c4d6b20503472e9d64bd7d9 assets\termc\models\item\fluorite_axe.json
 0bdfa4f2d55525792d905da4a38d873013a98e5a assets\termc\models\block\fluorite_button_pressed.json
 1d1de73adc4d07ef69f3ed69603e58840b39ceec assets\termc\models\item\fluorite_hoe.json
 94314b9582c8f3582fc3b8662f26ab7bf3108743 assets\termc\models\block\fluorite_wall_side_tall.json
@@ -83,8 +83,8 @@ c19622212fae82f4679926ddf69b5af7d5d6ddf6 assets\termc\models\block\fluorite_fenc
 07fdf4a1e57286a8f1eadac06e6777f2cc4b3a1d assets\termc\blockstates\lapis_wall_torch.json
 0eda2c9ad95742f98e75f8f6a570cefea9b68c3e assets\termc\blockstates\fluorite_trapdoor.json
 a516ca05b3e33b37f4be7450bc26efd63f43485e assets\termc\models\item\fluorite_slab.json
-18c6797395c106638e27c69348eb33bd3f47bb0b assets\termc\models\item\emerald_torch.json
 388102abd68165af44a6d45bf5c40cb7209d7132 assets\termc\blockstates\fluorite_fence.json
+18c6797395c106638e27c69348eb33bd3f47bb0b assets\termc\models\item\emerald_torch.json
 06a89549351758550d7333948e685f5bd31a8ffb assets\termc\models\block\fluorite_fence_gate.json
 6bfae939694cea66922073eedb70f2fdc762b3d0 assets\termc\models\block\lapis_torch.json
 5958f8450caf8dc300050883ee94301fa9899331 assets\termc\models\block\fluorite_stairs.json
