@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
@@ -178,7 +179,13 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 //Multiple recipes for the same Item
                 .offerTo(exporter, Identifier.of(TerMc.MOD_ID, "fluorite_hoe_2"));
 
-
-
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.FLUORITE_MULTITOOL)
+                .input(ModItems.FLUORITE_PICKAXE)
+                .input(ModItems.FLUORITE_AXE)
+                .input(ModItems.FLUORITE_SHOVEL)
+                .criterion(hasItem(ModItems.FLUORITE_PICKAXE), conditionsFromItem(ModItems.FLUORITE_PICKAXE))
+                .criterion(hasItem(ModItems.FLUORITE_AXE), conditionsFromItem(ModItems.FLUORITE_AXE))
+                .criterion(hasItem(ModItems.FLUORITE_SHOVEL), conditionsFromItem(ModItems.FLUORITE_SHOVEL))
+                .offerTo(exporter, Identifier.of(TerMc.MOD_ID, "fluorite_multitool"));
     }
 }
