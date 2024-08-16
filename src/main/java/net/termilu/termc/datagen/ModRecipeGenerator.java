@@ -179,13 +179,27 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 //Multiple recipes for the same Item
                 .offerTo(exporter, Identifier.of(TerMc.MOD_ID, "fluorite_hoe_2"));
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.FLUORITE_MULTITOOL)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.FLUORITE_HAMMER)
+                //Recipe
+                .pattern("FFF")
+                .pattern("FSF")
+                .pattern(" S ")
+                //Define input patternStr
+                .input('F', ModItems.FLUORITE)
+                .input('S', Items.STICK)
+                //Unlock recipe in recipe book if you pick up this items
+                .criterion(hasItem(ModItems.FLUORITE), conditionsFromItem(ModItems.FLUORITE))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.FLUORITE_MULTITOOL)
+                .input(ModItems.FLUORITE_SWORD)
                 .input(ModItems.FLUORITE_PICKAXE)
                 .input(ModItems.FLUORITE_AXE)
                 .input(ModItems.FLUORITE_SHOVEL)
+                .criterion(hasItem(ModItems.FLUORITE_SWORD), conditionsFromItem(ModItems.FLUORITE_SWORD))
                 .criterion(hasItem(ModItems.FLUORITE_PICKAXE), conditionsFromItem(ModItems.FLUORITE_PICKAXE))
                 .criterion(hasItem(ModItems.FLUORITE_AXE), conditionsFromItem(ModItems.FLUORITE_AXE))
                 .criterion(hasItem(ModItems.FLUORITE_SHOVEL), conditionsFromItem(ModItems.FLUORITE_SHOVEL))
-                .offerTo(exporter, Identifier.of(TerMc.MOD_ID, "fluorite_multitool"));
+                .offerTo(exporter);
     }
 }

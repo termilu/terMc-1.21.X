@@ -31,6 +31,16 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "has_fluorite_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "termc:fluorite_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "termc:fluorite_multitool"
@@ -41,6 +51,7 @@
   "requirements": [
     [
       "has_the_recipe",
+      "has_fluorite_sword",
       "has_fluorite_pickaxe",
       "has_fluorite_axe",
       "has_fluorite_shovel"
