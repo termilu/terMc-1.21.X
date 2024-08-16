@@ -3,6 +3,7 @@ package net.termilu.termc.block;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -12,6 +13,8 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.termilu.termc.TerMc;
+import net.termilu.termc.block.custom.LapisTorch;
+import net.termilu.termc.block.custom.LapisWallTorch;
 import net.termilu.termc.block.custom.MagicBlock;
 
 public class ModBlocks {
@@ -107,6 +110,24 @@ public class ModBlocks {
             new MagicBlock(AbstractBlock.Settings.create()
                     .strength(1f)
                     .requiresTool()));
+
+    public static final Block LAPIS_TORCH = registerBlock("lapis_torch",
+            new LapisTorch(AbstractBlock.Settings.create()
+                    .noCollision()
+                    .breakInstantly()
+                    .luminance(state -> 14)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .pistonBehavior(PistonBehavior.DESTROY)));
+
+    public static final Block LAPIS_WALL_TORCH = registerBlock("lapis_wall_torch",
+            new LapisWallTorch(AbstractBlock.Settings.create()
+                    .noCollision()
+                    .breakInstantly()
+                    .luminance(state -> 14)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .dropsLike(ModBlocks.LAPIS_TORCH)
+                    .pistonBehavior(PistonBehavior.DESTROY)));
+
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);

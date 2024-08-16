@@ -30,6 +30,8 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.MAGIC_BLOCK);
         addDrop(ModBlocks.FLUORITE_STAIRS);
 
+        addDrop(ModBlocks.LAPIS_TORCH);
+
         //Double-Blocks need extra typeDrops otherwise they drop twice
         addDrop(ModBlocks.FLUORITE_SLAB, slabDrops(ModBlocks.FLUORITE_SLAB));
         addDrop(ModBlocks.FLUORITE_DOOR, doorDrops(ModBlocks.FLUORITE_DOOR));

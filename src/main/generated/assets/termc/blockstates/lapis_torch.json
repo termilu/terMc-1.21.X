@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "termc:block/lapis_torch"
+    }
+  }
+}

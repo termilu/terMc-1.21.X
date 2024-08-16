@@ -65,6 +65,19 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 //Multiple recipes for the same Item
                 .offerTo(exporter, Identifier.of(TerMc.MOD_ID, "magic_block_2"));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModItems.LAPIS_TORCH)
+                //Recipe
+                .pattern("L")
+                .pattern("S")
+
+                //Define input patternStr
+                .input('L', Items.LAPIS_LAZULI)
+                .input('S', Items.STICK)
+                //Unlock recipe in recipe book if you pick up either of these items
+                .criterion(hasItem(Items.LAPIS_LAZULI), conditionsFromItem(Items.LAPIS_LAZULI))
+                //One recipe for the item
+                .offerTo(exporter);
+
         //Tools
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.FLUORITE_SWORD)
                 //Recipe

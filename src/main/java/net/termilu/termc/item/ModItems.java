@@ -8,9 +8,12 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
 import net.termilu.termc.TerMc;
+import net.termilu.termc.block.ModBlocks;
 import net.termilu.termc.item.custom.ChainsawItem;
 import net.termilu.termc.item.custom.HammerItem;
+import net.termilu.termc.item.custom.LapisTorchItem;
 import net.termilu.termc.item.custom.MultiToolItem;
 
 import java.util.List;
@@ -36,6 +39,9 @@ public class ModItems {
 
     //Custom items
     public static final Item CHAINSAW = registerItem("chainsaw", new ChainsawItem(new Item.Settings().maxDamage(64)));
+
+    public static final Item LAPIS_TORCH = registerItem("lapis_torch",
+            new LapisTorchItem(ModBlocks.LAPIS_TORCH, ModBlocks.LAPIS_WALL_TORCH, new Item.Settings(), Direction.DOWN));
 
     //Food
     public static final Item STRAWBERRY = registerItem("strawberry", new Item(new Item.Settings().food(ModFoodComponents.STRAWBERRY)){

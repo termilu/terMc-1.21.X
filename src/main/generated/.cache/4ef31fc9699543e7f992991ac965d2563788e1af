@@ -1,4 +1,4 @@
-// 1.21	2024-08-16T04:36:57.7377964	terMc/Recipes
+// 1.21	2024-08-16T08:17:30.8590087	terMc/Recipes
 566f464828a94431c5c703c7c5d7c7d32c161362 data\termc\recipe\fluorite_from_blasting_fluorite_end_ore.json
 9f5b109216d27100c487fb73de8716c4105cd551 data\termc\advancement\recipes\tools\fluorite_axe.json
 8fefbe104a3c3dbc9d427d0f28bd4cc47eb40308 data\termc\advancement\recipes\tools\fluorite_hoe.json
@@ -20,6 +20,7 @@ bf970dc082e5056795971ee43e91d116e6a3d7da data\termc\recipe\fluorite_from_blastin
 ae1e1bca197dd4e9751c6bd57501b5499031b44f data\termc\recipe\fluorite_from_blasting_fluorite_deepslate_ore.json
 21b4b5cec61c55bc1ca53b3065304b967a05b16e data\termc\recipe\fluorite_pickaxe.json
 8f6b85f88d97c0ae1e55dbfeddaf1d5afcca852f data\termc\advancement\recipes\tools\fluorite_shovel.json
+e05b51aa02724ee28fea310284924eda58c27bc5 data\termc\advancement\recipes\decorations\lapis_torch.json
 4a7c7cc303e535c45f24a96d3813b381140a9f01 data\termc\advancement\recipes\misc\fluorite_from_smelting_raw_fluorite.json
 1219509b063177cf7f1431ad4571e2792a397c65 data\termc\recipe\fluorite_from_blasting_raw_fluorite.json
 84d68f16d2245a52f05791f6a7f4fdfb4adcbeb3 data\termc\advancement\recipes\building_blocks\fluorite.json
@@ -34,6 +35,7 @@ eef38a4564df3a9b0bc63a99f2c0c84bb641efb1 data\termc\advancement\recipes\tools\fl
 a96bd687ce1c98beb65658778202ac63a56c412d data\termc\advancement\recipes\misc\fluorite_from_blasting_fluorite_nether_ore.json
 01872d1b4203bd2b61520b4245a9af54e488bb82 data\termc\recipe\fluorite_from_smelting_fluorite_end_ore.json
 c4d0b790f90515f788f47c37c38ec60ee89b883f data\termc\recipe\fluorite_block.json
+ec2d730bc7cbb432bf87f884c8ef53db0abe80a8 data\termc\recipe\lapis_torch.json
 f2e4408d6edf19adf212ea59d5c32892b4bb0fcd data\termc\advancement\recipes\combat\fluorite_sword.json
 82327ebb01ed2ed30a15e9803362c1717de58405 data\termc\advancement\recipes\misc\fluorite_from_smelting_fluorite_end_ore.json
 b1398de9c9e7e0b73d08b72c366f837e9645382c data\termc\advancement\recipes\decorations\fluorite_block.json
