@@ -61,6 +61,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.FLUORITE_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.FLUORITE_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.FLUORITE_HOE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.FLUORITE_MULTITOOL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.FLUORITE_HAMMER, Models.HANDHELD);
 
         //Food
         itemModelGenerator.register(ModItems.STRAWBERRY, Models.GENERATED);
