@@ -34,6 +34,7 @@ public class ModItemGroups {
                         entries.add(ModItems.FLUORITE_SHOVEL);
                         entries.add(ModItems.FLUORITE_HOE);
                         entries.add(ModItems.FLUORITE_MULTITOOL);
+                        entries.add(ModItems.FLUORITE_HAMMER);
 
                         //Blocks
                         entries.add(ModBlocks.FLUORITE_BLOCK);
@@ -122,6 +123,7 @@ public class ModItemGroups {
                         entries.add(ModItems.FLUORITE_SHOVEL);
                         entries.add(ModItems.FLUORITE_HOE);
                         entries.add(ModItems.FLUORITE_MULTITOOL);
+                        entries.add(ModItems.FLUORITE_HAMMER);
 
                         // Add new Items for Itemgroup fluorite_blocks here
 
