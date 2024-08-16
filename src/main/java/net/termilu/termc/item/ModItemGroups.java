@@ -46,6 +46,10 @@ public class ModItemGroups {
                         entries.add(ModBlocks.FLUORITE_STAIRS);
                         entries.add(ModBlocks.FLUORITE_SLAB);
 
+                        entries.add(ModBlocks.LAPIS_TORCH);
+                        entries.add(ModBlocks.EMERALD_TORCH);
+
+
                         //Redstone
                         entries.add(ModBlocks.FLUORITE_BUTTON);
                         entries.add(ModBlocks.FLUORITE_PRESSURE_PLATE);

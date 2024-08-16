@@ -11,5 +11,10 @@ public class TerMcClient implements ClientModInitializer {
         //Make doors and trapdoors cutouts see-through
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FLUORITE_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FLUORITE_TRAPDOOR, RenderLayer.getCutout());
+        //Same for torches
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LAPIS_TORCH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LAPIS_WALL_TORCH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.EMERALD_TORCH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.EMERALD_WALL_TORCH, RenderLayer.getCutout());
     }
 }
