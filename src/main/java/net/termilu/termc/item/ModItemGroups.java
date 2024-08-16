@@ -47,6 +47,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.FLUORITE_SLAB);
 
                         entries.add(ModBlocks.LAPIS_TORCH);
+                        entries.add(ModBlocks.EMERALD_TORCH);
 
 
                         //Redstone

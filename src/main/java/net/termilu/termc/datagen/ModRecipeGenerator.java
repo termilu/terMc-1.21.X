@@ -78,6 +78,19 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 //One recipe for the item
                 .offerTo(exporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModItems.EMERALD_TORCH)
+                //Recipe
+                .pattern("E")
+                .pattern("S")
+
+                //Define input patternStr
+                .input('E', Items.EMERALD)
+                .input('S', Items.STICK)
+                //Unlock recipe in recipe book if you pick up either of these items
+                .criterion(hasItem(Items.EMERALD), conditionsFromItem(Items.LAPIS_LAZULI))
+                //One recipe for the item
+                .offerTo(exporter);
+
         //Tools
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.FLUORITE_SWORD)
                 //Recipe

@@ -27,6 +27,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MAGIC_BLOCK);
 
         blockStateModelGenerator.registerTorch(ModBlocks.LAPIS_TORCH, ModBlocks.LAPIS_WALL_TORCH);
+        blockStateModelGenerator.registerTorch(ModBlocks.EMERALD_TORCH, ModBlocks.EMERALD_WALL_TORCH);
 
         //Generate derivables
         fluoriteTexturePool.stairs(ModBlocks.FLUORITE_STAIRS);

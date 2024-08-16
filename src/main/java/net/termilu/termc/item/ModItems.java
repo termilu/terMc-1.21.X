@@ -11,10 +11,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 import net.termilu.termc.TerMc;
 import net.termilu.termc.block.ModBlocks;
-import net.termilu.termc.item.custom.ChainsawItem;
-import net.termilu.termc.item.custom.HammerItem;
-import net.termilu.termc.item.custom.LapisTorchItem;
-import net.termilu.termc.item.custom.MultiToolItem;
+import net.termilu.termc.item.custom.*;
 
 import java.util.List;
 
@@ -42,6 +39,9 @@ public class ModItems {
 
     public static final Item LAPIS_TORCH = registerItem("lapis_torch",
             new LapisTorchItem(ModBlocks.LAPIS_TORCH, ModBlocks.LAPIS_WALL_TORCH, new Item.Settings(), Direction.DOWN));
+
+    public static final Item EMERALD_TORCH = registerItem("emerald_torch",
+            new EmeraldTorchItem(ModBlocks.EMERALD_TORCH, ModBlocks.EMERALD_WALL_TORCH, new Item.Settings(), Direction.DOWN));
 
     //Food
     public static final Item STRAWBERRY = registerItem("strawberry", new Item(new Item.Settings().food(ModFoodComponents.STRAWBERRY)){

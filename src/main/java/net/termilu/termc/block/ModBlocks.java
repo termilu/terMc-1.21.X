@@ -13,9 +13,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.termilu.termc.TerMc;
-import net.termilu.termc.block.custom.LapisTorch;
-import net.termilu.termc.block.custom.LapisWallTorch;
-import net.termilu.termc.block.custom.MagicBlock;
+import net.termilu.termc.block.custom.*;
 
 public class ModBlocks {
 
@@ -126,6 +124,23 @@ public class ModBlocks {
                     .luminance(state -> 14)
                     .sounds(BlockSoundGroup.WOOD)
                     .dropsLike(ModBlocks.LAPIS_TORCH)
+                    .pistonBehavior(PistonBehavior.DESTROY)));
+
+    public static final Block EMERALD_TORCH = registerBlock("emerald_torch",
+            new EmeraldTorch(AbstractBlock.Settings.create()
+                    .noCollision()
+                    .breakInstantly()
+                    .luminance(state -> 14)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .pistonBehavior(PistonBehavior.DESTROY)));
+
+    public static final Block EMERALD_WALL_TORCH = registerBlock("emerald_wall_torch",
+            new EmeraldWallTorch(AbstractBlock.Settings.create()
+                    .noCollision()
+                    .breakInstantly()
+                    .luminance(state -> 14)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .dropsLike(ModBlocks.EMERALD_TORCH)
                     .pistonBehavior(PistonBehavior.DESTROY)));
 
 

@@ -14,5 +14,7 @@ public class TerMcClient implements ClientModInitializer {
         //Same for torches
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LAPIS_TORCH, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LAPIS_WALL_TORCH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.EMERALD_TORCH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.EMERALD_WALL_TORCH, RenderLayer.getCutout());
     }
 }
