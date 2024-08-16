@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "termc:fluorite_pickaxe"
+    },
+    {
+      "item": "termc:fluorite_axe"
+    },
+    {
+      "item": "termc:fluorite_shovel"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "termc:fluorite_multitool"
+  }
+}

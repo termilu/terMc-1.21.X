@@ -1,0 +1,54 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_fluorite_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "termc:fluorite_axe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_fluorite_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "termc:fluorite_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_fluorite_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "termc:fluorite_shovel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "termc:fluorite_multitool"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_fluorite_pickaxe",
+      "has_fluorite_axe",
+      "has_fluorite_shovel"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "termc:fluorite_multitool"
+    ]
+  }
+}
