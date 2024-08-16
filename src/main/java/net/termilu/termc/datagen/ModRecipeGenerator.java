@@ -35,7 +35,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         //Generate the 3x3 item -> block crafting recipe AND the Block -> 9 Item recipe
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.FLUORITE, RecipeCategory.DECORATIONS, ModBlocks.FLUORITE_BLOCK);
 
-        //Generate Shaped recipe for Magic Block
+        //Generate Shaped recipe
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.MAGIC_BLOCK)
                 //Recipe
                 .pattern("FFF")
@@ -78,7 +78,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 //One recipe for the item
                 .offerTo(exporter);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModItems.EMERALD_TORCH)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModItems.EMERALD_TORCH)
                 //Recipe
                 .pattern("E")
                 .pattern("S")
@@ -177,6 +177,8 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.FLUORITE), conditionsFromItem(ModItems.FLUORITE))
                 //Multiple recipes for the same Item
                 .offerTo(exporter, Identifier.of(TerMc.MOD_ID, "fluorite_hoe_2"));
+
+
 
     }
 }
