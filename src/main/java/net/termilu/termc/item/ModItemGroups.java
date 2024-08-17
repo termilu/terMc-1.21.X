@@ -58,6 +58,9 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.MAGIC_BLOCK);
 
+                        //Spawn eggs
+                        entries.add(ModItems.DODO_SPAWN_EGG);
+
                         //Food
                         entries.add(ModItems.STRAWBERRY);
 

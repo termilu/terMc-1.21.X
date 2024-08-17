@@ -3,7 +3,10 @@ package net.termilu.termc;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.termilu.termc.block.ModBlocks;
+import net.termilu.termc.entity.ModEntities;
+import net.termilu.termc.entity.custom.DodoEntity;
 import net.termilu.termc.item.ModItemGroups;
 import net.termilu.termc.item.ModItems;
 import net.termilu.termc.sound.ModSounds;
@@ -20,10 +23,16 @@ public class TerMc implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItemGroups.registerItemGroups();
+
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		Fueltems.registerFuelItems();
+
 		ModSounds.registerSounds();
+
+		ModEntities.registerModEntities();
+		FabricDefaultAttributeRegistry.register(ModEntities.DODO, DodoEntity.createDodoAttributes());
+
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 	}
 }

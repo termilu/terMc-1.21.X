@@ -1,4 +1,4 @@
-// 1.21	2024-08-16T10:00:06.6595994	terMc/Model Definitions
+// 1.21	2024-08-17T09:15:57.033712	terMc/Model Definitions
 0fb1fbd85516f84f4f2184e406bd72f77d438cf2 assets\termc\models\block\magic_block.json
 bcf854e2aece106ca796a0b31f3db6b2b71d819c assets\termc\models\item\raw_fluorite.json
 8a6044a61004a75a9eb7e97027c27d85cb7a4d96 assets\termc\models\item\magic_block.json
@@ -21,8 +21,8 @@ f625b351e3f38fa3fba5fa73b3d150a4109d6d1d assets\termc\models\block\lapis_wall_to
 4f38932a1f494afa28abfc00bb3ea985ff3f7fcf assets\termc\models\item\fluorite_multitool.json
 e703a9f4a098716c235a6d5fdfd8d594d1e9a832 assets\termc\models\item\fluorite_pressure_plate.json
 3346e5e28881d678792803336c46fe12f916ea71 assets\termc\blockstates\fluorite_nether_ore.json
-7c7776d76e563b9d9c4d6b20503472e9d64bd7d9 assets\termc\models\item\fluorite_axe.json
 c2ef76a3e8566300f7165cbe496b53adc933c2bd assets\termc\models\block\fluorite_slab_top.json
+7c7776d76e563b9d9c4d6b20503472e9d64bd7d9 assets\termc\models\item\fluorite_axe.json
 0bdfa4f2d55525792d905da4a38d873013a98e5a assets\termc\models\block\fluorite_button_pressed.json
 1d1de73adc4d07ef69f3ed69603e58840b39ceec assets\termc\models\item\fluorite_hoe.json
 94314b9582c8f3582fc3b8662f26ab7bf3108743 assets\termc\models\block\fluorite_wall_side_tall.json
@@ -48,8 +48,8 @@ d63fdba380d05fc9112507ff12f4db2148193e1c assets\termc\models\item\fluorite_wall.
 75239b8552260e3f4bfa99e9ee7b8e9dfa5441c4 assets\termc\models\block\fluorite_trapdoor_top.json
 c2024aa2944d9b33d44e905323b0700565db5778 assets\termc\models\item\fluorite_pickaxe.json
 3026a65a070f20208545391ad2a091f8d928c241 assets\termc\models\block\fluorite_button.json
-3a2438b19f5ad001ea9883b340296d06897d9be5 assets\termc\models\item\fluorite_fence_gate.json
 5e82d9227429ba38391020ef9ec12859f7994401 assets\termc\models\item\lapis_torch.json
+3a2438b19f5ad001ea9883b340296d06897d9be5 assets\termc\models\item\fluorite_fence_gate.json
 5a6fbbd3dc868853cec18e713ceb1c7b82ce6255 assets\termc\models\block\fluorite_wall_inventory.json
 20b7f1c14f81235268006e6db5697aecd0512c7d assets\termc\blockstates\fluorite_ore.json
 a2ebef70d4fc0c6684979ec3d83b4747269ce50c assets\termc\models\block\fluorite_slab.json
@@ -64,6 +64,7 @@ f8115ca42197152ca06f53216b76c18335e4a52d assets\termc\blockstates\fluorite_stair
 3d0017d08292940310d7746b2428c1e991001306 assets\termc\blockstates\fluorite_slab.json
 32c30986ca1b552484bce3d86b34dea47caa7830 assets\termc\models\item\fluorite_nether_ore.json
 42816ab69934ad78d9c85c7ebbe461d4a6200eee assets\termc\blockstates\magic_block.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets\termc\models\item\dodo_spawn_egg.json
 fa19706a5fc3a241bf412b5de808728287e98b6e assets\termc\models\item\fluorite_shovel.json
 3d5f6943e5001dc21113a2f3fd980846d4c6382c assets\termc\models\block\fluorite_door_top_right.json
 b8d31b8281142262fccd56aa516e0cd3ba711e7e assets\termc\models\item\raw_pink_garnet.json
@@ -83,8 +84,8 @@ c19622212fae82f4679926ddf69b5af7d5d6ddf6 assets\termc\models\block\fluorite_fenc
 07fdf4a1e57286a8f1eadac06e6777f2cc4b3a1d assets\termc\blockstates\lapis_wall_torch.json
 0eda2c9ad95742f98e75f8f6a570cefea9b68c3e assets\termc\blockstates\fluorite_trapdoor.json
 a516ca05b3e33b37f4be7450bc26efd63f43485e assets\termc\models\item\fluorite_slab.json
-388102abd68165af44a6d45bf5c40cb7209d7132 assets\termc\blockstates\fluorite_fence.json
 18c6797395c106638e27c69348eb33bd3f47bb0b assets\termc\models\item\emerald_torch.json
+388102abd68165af44a6d45bf5c40cb7209d7132 assets\termc\blockstates\fluorite_fence.json
 06a89549351758550d7333948e685f5bd31a8ffb assets\termc\models\block\fluorite_fence_gate.json
 6bfae939694cea66922073eedb70f2fdc762b3d0 assets\termc\models\block\lapis_torch.json
 5958f8450caf8dc300050883ee94301fa9899331 assets\termc\models\block\fluorite_stairs.json
