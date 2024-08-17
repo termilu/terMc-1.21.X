@@ -49,6 +49,10 @@ public class ModItems {
             //Spawn egg colors
             new SpawnEggItem(ModEntities.DODO, 0x465ae0, 0x545978, new Item.Settings()));
 
+    public static final Item CAPYBARA_SPAWN_EGG = registerItem("capybara_spawn_egg",
+            //Spawn egg colors
+            new SpawnEggItem(ModEntities.CAPYBARA, 0x94734c, 0x46423e, new Item.Settings()));
+
     //Food
     public static final Item STRAWBERRY = registerItem("strawberry", new Item(new Item.Settings().food(ModFoodComponents.STRAWBERRY)){
         //anonymous class to add custom tooltips for items that don't have their own class

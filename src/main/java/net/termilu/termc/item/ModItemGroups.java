@@ -60,6 +60,7 @@ public class ModItemGroups {
 
                         //Spawn eggs
                         entries.add(ModItems.DODO_SPAWN_EGG);
+                        entries.add(ModItems.CAPYBARA_SPAWN_EGG);
 
                         //Food
                         entries.add(ModItems.STRAWBERRY);

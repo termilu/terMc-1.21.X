@@ -17,10 +17,12 @@
   "item.termc.fluorite_hammer": "Fluorite Hammer",
 
   "item.termc.strawberry":  "Strawberry",
+  "item.termc.orange":  "Orange",
 
   "item.termc.star_fragment": "Star Fragment",
 
   "item.termc.dodo_spawn_egg": "Dodo Spawn Egg",
+  "item.termc.capybara_spawn_egg": "Capybara Spawn Egg",
 
   "block.termc.fluorite_block": "Fluorite Block",
   "block.termc.fluorite_ore": "Fluorite Ore",
@@ -57,5 +59,7 @@
   "tooltip.termc.chainsaw.tooltip.2": "§5Chainsaw§r go vroom!",
   "tooltip.termc.magic_block.tooltip.1": "Turns §5Crystals§r into §4Redstone§r or §1Lapis§r",
   "tooltip.termc.star_fragment.tooltip.1": "It burns with the heat of a star",
-  "tooltip.termc.strawberry.tooltip.1": "A juicy snack"
+  "tooltip.termc.strawberry.tooltip.1": "A juicy snack",
+  "tooltip.termc.orange.tooltip.1": "Maybe you could make a furry friend with these?"
+
 }

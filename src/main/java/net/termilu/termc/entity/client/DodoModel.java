@@ -134,6 +134,8 @@ public class DodoModel extends SinglePartEntityModel<DodoEntity> {
         this.head.yaw = headYaw * (float) (Math.PI / 180.0);
         this.head.pitch = headPitch * (float) (Math.PI / 180.0);
     }
+
+    //replace 4 floats with int color
     @Override
     public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, int color) {
         body.render(matrices, vertexConsumer, light, overlay, color);

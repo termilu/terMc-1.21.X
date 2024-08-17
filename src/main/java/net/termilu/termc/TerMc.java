@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.termilu.termc.block.ModBlocks;
 import net.termilu.termc.entity.ModEntities;
+import net.termilu.termc.entity.custom.CapybaraEntity;
 import net.termilu.termc.entity.custom.DodoEntity;
 import net.termilu.termc.item.ModItemGroups;
 import net.termilu.termc.item.ModItems;
@@ -32,6 +33,7 @@ public class TerMc implements ModInitializer {
 
 		ModEntities.registerModEntities();
 		FabricDefaultAttributeRegistry.register(ModEntities.DODO, DodoEntity.createDodoAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.CAPYBARA, CapybaraEntity.createCapybaraAttributes());
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 	}

@@ -7,4 +7,7 @@ import net.termilu.termc.TerMc;
 public class ModEntityModelLayers {
     public static final EntityModelLayer DODO =
             new EntityModelLayer(Identifier.of(TerMc.MOD_ID, "dodo"), "main");
+
+    public static final EntityModelLayer CAPYBARA =
+            new EntityModelLayer(Identifier.of(TerMc.MOD_ID, "capybara"), "main");
 }

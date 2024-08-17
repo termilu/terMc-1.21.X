@@ -1,12 +1,12 @@
-// 1.21	2024-08-17T09:15:57.033712	terMc/Model Definitions
+// 1.21	2024-08-17T11:12:42.1412101	terMc/Model Definitions
 0fb1fbd85516f84f4f2184e406bd72f77d438cf2 assets\termc\models\block\magic_block.json
 bcf854e2aece106ca796a0b31f3db6b2b71d819c assets\termc\models\item\raw_fluorite.json
 8a6044a61004a75a9eb7e97027c27d85cb7a4d96 assets\termc\models\item\magic_block.json
 905a4ed8ef8319aaeb19c7fd90b1679ddd3ca623 assets\termc\blockstates\fluorite_deepslate_ore.json
 885ee1c53cbe9936eadeaed49cfbe32db3137813 assets\termc\blockstates\fluorite_end_ore.json
 27793cf7545336cd65204c2a9c28e20cb8cf98df assets\termc\blockstates\fluorite_block.json
-b1abdad3d2c5f3a09e07c780a5d1e60b6166d438 assets\termc\models\item\fluorite_button.json
 2cca06e18ac9d9bcc8a091f45aeeb9de67025eac assets\termc\models\block\fluorite_door_bottom_left_open.json
+b1abdad3d2c5f3a09e07c780a5d1e60b6166d438 assets\termc\models\item\fluorite_button.json
 f672dc0253ef30287f53ffb7565ca3f36c3b01a3 assets\termc\models\block\fluorite_stairs_outer.json
 e8ada40918f6fbeccff50c6d07296f3a534b1cac assets\termc\models\block\fluorite_fence_post.json
 47a7654b8fe6f26410d556883f72ea58cc5fbcf0 assets\termc\models\item\fluorite_hammer.json
@@ -29,6 +29,7 @@ c2ef76a3e8566300f7165cbe496b53adc933c2bd assets\termc\models\block\fluorite_slab
 76a05088f7f83003a5cceedca92e02be252cc869 assets\termc\models\block\fluorite_stairs_inner.json
 09375eaaa65c2b2cfe5a973d3b129fb5a08b3829 assets\termc\models\block\fluorite_door_bottom_right_open.json
 ead7a29f0a59cdd2bb6c8601e4860ac8bebfaf9e assets\termc\models\block\fluorite_door_bottom_right.json
+3ea2ef6134558e62c1cba9d46f2aaa4ff18e3fc9 assets\termc\models\item\orange.json
 1d3119b37e7c45453b26f092a0069c1ac6ebd0d5 assets\termc\blockstates\fluorite_door.json
 59e36c7933c5b5884c56e16022e160f3707657cc assets\termc\models\item\strawberry.json
 961bc6c460c41565debd655a4426adc651c396ea assets\termc\models\block\fluorite_nether_ore.json
@@ -40,6 +41,7 @@ ead7a29f0a59cdd2bb6c8601e4860ac8bebfaf9e assets\termc\models\block\fluorite_door
 bcdf7457ed6605b6da32e3d04c8e92c4ebf79757 assets\termc\models\block\fluorite_pressure_plate_down.json
 8ce77216e84de65c81f1435f9f8d5b632ad2be60 assets\termc\models\block\fluorite_pressure_plate.json
 aa27e8385689ca8feeb9af07b4fedd35b43347ac assets\termc\models\block\fluorite_end_ore.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets\termc\models\item\capybara_spawn_egg.json
 9945d406a292e877709be363e1beb6d234bac82f assets\termc\models\block\fluorite_fence_gate_open.json
 d63fdba380d05fc9112507ff12f4db2148193e1c assets\termc\models\item\fluorite_wall.json
 26c3658d2dc5b6b48defb745ca85ad213daec205 assets\termc\blockstates\fluorite_wall.json

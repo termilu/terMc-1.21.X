@@ -7,9 +7,7 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
 import net.termilu.termc.block.ModBlocks;
 import net.termilu.termc.entity.ModEntities;
-import net.termilu.termc.entity.client.DodoModel;
-import net.termilu.termc.entity.client.DodoRenderer;
-import net.termilu.termc.entity.client.ModEntityModelLayers;
+import net.termilu.termc.entity.client.*;
 
 public class TerMcClient implements ClientModInitializer {
     @Override
@@ -26,5 +24,8 @@ public class TerMcClient implements ClientModInitializer {
         //Entity models
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.DODO, DodoModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.DODO, DodoRenderer::new);
+
+        EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.CAPYBARA, CapybaraModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.CAPYBARA, CapybaraRenderer::new);
     }
 }
