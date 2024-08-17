@@ -1,22 +1,35 @@
 package net.termilu.termc.entity.custom;
 
 import net.minecraft.entity.AnimationState;
+import net.minecraft.entity.EntityData;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.data.*;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.Util;
+import net.minecraft.world.LocalDifficulty;
+import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import net.termilu.termc.entity.ModEntities;
+import net.termilu.termc.entity.variant.DodoVariant;
 import net.termilu.termc.item.ModItems;
 import org.jetbrains.annotations.Nullable;
 
 public class DodoEntity extends AnimalEntity {
+
+    //TrackedData for Variant ID's synced between Server and Client
+    private static final TrackedData<Integer> DATA_ID_TYPE_VARIANT =
+            DataTracker.registerData(DodoEntity.class, TrackedDataHandlerRegistry.INTEGER);
+
     public final AnimationState idleAnimationstate = new AnimationState();
     private int idleAnimationTimeout = 0;
 
@@ -76,5 +89,48 @@ public class DodoEntity extends AnimalEntity {
     @Override
     public PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
         return ModEntities.DODO.create(world);
+    }
+
+    /* VARIANT */
+
+    @Override
+    protected void initDataTracker(DataTracker.Builder builder) {
+        super.initDataTracker(builder);
+        //By default spawn blue dodo variant
+        builder.add(DATA_ID_TYPE_VARIANT, 0);
+    }
+
+    private int getTypeVariant(){
+        return this.dataTracker.get(DATA_ID_TYPE_VARIANT);
+    }
+
+    public DodoVariant getVariant(){
+        //Bitwise & taken from HorseEntity
+        return DodoVariant.byID(getTypeVariant() & 255);
+    }
+
+    public void setVariant(DodoVariant variant){
+        this.dataTracker.set(DATA_ID_TYPE_VARIANT, variant.getId() & 255);
+    }
+
+    //Dodo chooses random variant when it spawns
+    @Override
+    public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData) {
+        DodoVariant variant = Util.getRandom(DodoVariant.values(), this.random);
+        setVariant(variant);
+        return super.initialize(world, difficulty, spawnReason, entityData);
+    }
+
+    //Read and write custom variant data to nbt so variants persist through world saving
+    @Override
+    public void readCustomDataFromNbt(NbtCompound nbt) {
+        super.readCustomDataFromNbt(nbt);
+        this.dataTracker.set(DATA_ID_TYPE_VARIANT, nbt.getInt("Variant"));
+    }
+
+    @Override
+    public void writeCustomDataToNbt(NbtCompound nbt) {
+        super.writeCustomDataToNbt(nbt);
+        nbt.putInt("Variant", this.getTypeVariant());
     }
 }

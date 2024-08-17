@@ -1,14 +1,26 @@
 package net.termilu.termc.entity.client;
 
+import com.google.common.collect.Maps;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Util;
 import net.termilu.termc.TerMc;
 import net.termilu.termc.entity.custom.CapybaraEntity;
+import net.termilu.termc.entity.variant.CapybaraVariant;
+
+import java.util.Map;
 
 public class CapybaraRenderer extends MobEntityRenderer<CapybaraEntity, CapybaraModel> {
+    //For variants map is needed
+    private static final Map<CapybaraVariant, Identifier> LOCATION_BY_VARIANT =
+            Util.make(Maps.newEnumMap(CapybaraVariant.class), map -> {
+                map.put(CapybaraVariant.BROWN, Identifier.of(TerMc.MOD_ID, "textures/entity/capybara/capybara.png"));
+                map.put(CapybaraVariant.WHITE, Identifier.of(TerMc.MOD_ID, "textures/entity/capybara/capybara_snow.png"));
+
+            });
 
     public CapybaraRenderer(EntityRendererFactory.Context context) {
         super(context, new CapybaraModel(context.getPart(ModEntityModelLayers.CAPYBARA)), 0.5f);
@@ -16,7 +28,11 @@ public class CapybaraRenderer extends MobEntityRenderer<CapybaraEntity, Capybara
 
     @Override
     public Identifier getTexture(CapybaraEntity entity) {
-        return Identifier.of(TerMc.MOD_ID, "textures/entity/capybara/capybara.png");
+        //If only one variant exists
+        //return Identifier.of(TerMc.MOD_ID, "textures/entity/capybara/capybara.png");
+
+        //For multiple Variants
+        return LOCATION_BY_VARIANT.get(entity.getVariant());
     }
 
     @Override
