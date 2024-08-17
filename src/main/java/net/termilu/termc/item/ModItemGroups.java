@@ -63,6 +63,7 @@ public class ModItemGroups {
 
                         //Food
                         entries.add(ModItems.STRAWBERRY);
+                        entries.add(ModItems.ORANGE);
 
                         //Fuel
                         entries.add(ModItems.STAR_FRAGMENT);
@@ -143,6 +144,7 @@ public class ModItemGroups {
                     // Build Icon of Itemgroup
                     .icon(() -> new ItemStack(ModItems.STRAWBERRY)).entries((displayContext, entries) -> {
                         entries.add(ModItems.STRAWBERRY);
+                        entries.add(ModItems.ORANGE);
 
 
                     }).build());

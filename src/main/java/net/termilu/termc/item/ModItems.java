@@ -59,6 +59,15 @@ public class ModItems {
         }
     });
 
+    public static final Item ORANGE = registerItem("orange", new Item(new Item.Settings().food(ModFoodComponents.ORANGE)){
+        //anonymous class to add custom tooltips for items that don't have their own class
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.termc.orange.tooltip.1"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+
     //Fuel
     public static final Item STAR_FRAGMENT = registerItem("star_fragment", new Item(new Item.Settings()){
         @Override

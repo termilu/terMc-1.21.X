@@ -77,6 +77,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         //Food
         itemModelGenerator.register(ModItems.STRAWBERRY, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ORANGE, Models.GENERATED);
 
         //Fuel
         itemModelGenerator.register(ModItems.STAR_FRAGMENT, Models.GENERATED);
