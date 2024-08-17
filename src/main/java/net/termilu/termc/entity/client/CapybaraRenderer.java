@@ -41,9 +41,14 @@ public class CapybaraRenderer extends MobEntityRenderer<CapybaraEntity, Capybara
 
         //Scale down if it's a baby
         if(livingEntity.isBaby()){
-            matrixStack.scale(0.5f, 0.5f, 0.5f);
+            matrixStack.scale(0.7f, 0.7f, 0.7f);
         }
 
         super.render(livingEntity, f, g, matrixStack, vertexConsumerProvider, i);
+    }
+
+    @Override
+    protected float getShadowRadius(CapybaraEntity mobEntity) {
+        return 0.3f;
     }
 }
