@@ -26,6 +26,7 @@ import net.termilu.termc.entity.variant.CapybaraVariant;
 import net.termilu.termc.item.ModItems;
 import org.jetbrains.annotations.Nullable;
 
+//TODO: Make Capybaras tameable & add interaction with orange
 public class CapybaraEntity extends AnimalEntity {
 
     //TrackedData for Variant ID's synced between Server and Client

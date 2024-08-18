@@ -7,6 +7,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 
+//TODO: Add emerald/lapis redstone that doesnt connect with normal redstone
 public class EmeraldTorch extends RedstoneTorchBlock {
     public EmeraldTorch(Settings settings) {
         super(settings);

@@ -24,6 +24,7 @@ import net.termilu.termc.entity.variant.DodoVariant;
 import net.termilu.termc.item.ModItems;
 import org.jetbrains.annotations.Nullable;
 
+//TODO: Make Dodos tame- and rideable
 public class DodoEntity extends AnimalEntity {
 
     //TrackedData for Variant ID's synced between Server and Client
