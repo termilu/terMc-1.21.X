@@ -58,8 +58,13 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.MAGIC_BLOCK);
 
+                        //Spawn eggs
+                        entries.add(ModItems.DODO_SPAWN_EGG);
+                        entries.add(ModItems.CAPYBARA_SPAWN_EGG);
+
                         //Food
                         entries.add(ModItems.STRAWBERRY);
+                        entries.add(ModItems.ORANGE);
 
                         //Fuel
                         entries.add(ModItems.STAR_FRAGMENT);
@@ -140,6 +145,7 @@ public class ModItemGroups {
                     // Build Icon of Itemgroup
                     .icon(() -> new ItemStack(ModItems.STRAWBERRY)).entries((displayContext, entries) -> {
                         entries.add(ModItems.STRAWBERRY);
+                        entries.add(ModItems.ORANGE);
 
 
                     }).build());

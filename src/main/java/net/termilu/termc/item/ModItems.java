@@ -11,6 +11,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 import net.termilu.termc.TerMc;
 import net.termilu.termc.block.ModBlocks;
+import net.termilu.termc.entity.ModEntities;
 import net.termilu.termc.item.custom.*;
 
 import java.util.List;
@@ -43,12 +44,30 @@ public class ModItems {
     public static final Item EMERALD_TORCH = registerItem("emerald_torch",
             new EmeraldTorchItem(ModBlocks.EMERALD_TORCH, ModBlocks.EMERALD_WALL_TORCH, new Item.Settings(), Direction.DOWN));
 
+    //Spawn eggs
+    public static final Item DODO_SPAWN_EGG = registerItem("dodo_spawn_egg",
+            //Spawn egg colors
+            new SpawnEggItem(ModEntities.DODO, 0x465ae0, 0x545978, new Item.Settings()));
+
+    public static final Item CAPYBARA_SPAWN_EGG = registerItem("capybara_spawn_egg",
+            //Spawn egg colors
+            new SpawnEggItem(ModEntities.CAPYBARA, 0x94734c, 0x46423e, new Item.Settings()));
+
     //Food
     public static final Item STRAWBERRY = registerItem("strawberry", new Item(new Item.Settings().food(ModFoodComponents.STRAWBERRY)){
         //anonymous class to add custom tooltips for items that don't have their own class
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
             tooltip.add(Text.translatable("tooltip.termc.strawberry.tooltip.1"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+
+    public static final Item ORANGE = registerItem("orange", new Item(new Item.Settings().food(ModFoodComponents.ORANGE)){
+        //anonymous class to add custom tooltips for items that don't have their own class
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.termc.orange.tooltip.1"));
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
