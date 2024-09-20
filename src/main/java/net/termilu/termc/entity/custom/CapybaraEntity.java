@@ -16,11 +16,13 @@ import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.util.Util;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.BiomeKeys;
 import net.termilu.termc.entity.ModEntities;
 import net.termilu.termc.entity.variant.CapybaraVariant;
 import net.termilu.termc.item.ModItems;
@@ -116,10 +118,24 @@ public class CapybaraEntity extends AnimalEntity {
         this.dataTracker.set(DATA_ID_TYPE_VARIANT, variant.getId() & 255);
     }
 
-    //Capybara chooses random variant when it spawns
+    //Spawn capybara white variant in snowy biomes, else brown variant
     @Override
     public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData) {
-        CapybaraVariant variant = Util.getRandom(CapybaraVariant.values(), this.random);
+        RegistryEntry<Biome> biomeRegistryEntry = world.getBiome(this.getBlockPos());
+        CapybaraVariant variant;
+
+        if(biomeRegistryEntry.matchesKey(BiomeKeys.GROVE) ||
+                biomeRegistryEntry.matchesKey(BiomeKeys.SNOWY_BEACH) ||
+                biomeRegistryEntry.matchesKey(BiomeKeys.SNOWY_PLAINS) ||
+                biomeRegistryEntry.matchesKey(BiomeKeys.SNOWY_TAIGA)){
+
+            variant = CapybaraVariant.WHITE;
+        }else{
+            variant = CapybaraVariant.BROWN;
+        }
+
+        //CapybaraVariant variant = Util.getRandom(CapybaraVariant.values(), this.random);
+
         setVariant(variant);
         return super.initialize(world, difficulty, spawnReason, entityData);
     }

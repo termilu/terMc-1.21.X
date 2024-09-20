@@ -13,6 +13,7 @@ import net.termilu.termc.item.ModItems;
 import net.termilu.termc.sound.ModSounds;
 import net.termilu.termc.util.Fueltems;
 import net.termilu.termc.util.HammerUsageEvent;
+import net.termilu.termc.worldgen.ModEntitySpawns;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,6 +33,7 @@ public class TerMc implements ModInitializer {
 		ModSounds.registerSounds();
 
 		ModEntities.registerModEntities();
+		ModEntitySpawns.addSpawns();
 		FabricDefaultAttributeRegistry.register(ModEntities.DODO, DodoEntity.createDodoAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.CAPYBARA, CapybaraEntity.createCapybaraAttributes());
 
