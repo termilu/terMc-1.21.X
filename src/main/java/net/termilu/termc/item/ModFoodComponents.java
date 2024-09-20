@@ -10,4 +10,7 @@ public class ModFoodComponents {
 
     public static final FoodComponent ORANGE = new FoodComponent.Builder().nutrition(4).saturationModifier(0.4f)
             .statusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING, 200), 1f).build();
+
+    public static final FoodComponent MANGO = new FoodComponent.Builder().nutrition(4).saturationModifier(0.4f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 200), 1f).build();
 }
