@@ -18,6 +18,7 @@
 
   "item.termc.strawberry":  "Strawberry",
   "item.termc.orange":  "Orange",
+  "item.termc.mango": "Mango",
 
   "item.termc.star_fragment": "Star Fragment",
 
@@ -59,7 +60,9 @@
   "tooltip.termc.chainsaw.tooltip.2": "§5Chainsaw§r go vroom!",
   "tooltip.termc.magic_block.tooltip.1": "Turns §5Crystals§r into §4Redstone§r or §1Lapis§r",
   "tooltip.termc.star_fragment.tooltip.1": "It burns with the heat of a star",
+
   "tooltip.termc.strawberry.tooltip.1": "A juicy snack",
-  "tooltip.termc.orange.tooltip.1": "Maybe you could make a furry friend with these?"
+  "tooltip.termc.orange.tooltip.1": "Maybe you could make a furry friend with these?",
+  "tooltip.termc.mango.tooltip.1": "The refreshing taste makes you sprint faster for a little while."
 
 }
