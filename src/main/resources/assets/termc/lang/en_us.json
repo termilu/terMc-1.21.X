@@ -55,6 +55,11 @@
   "sounds.termc.chainsaw_cut": "Chainsaw cutting sound",
   "sounds.termc.chainsaw_pull": "Chainsaw pulling sound",
 
+  "sounds.termc.capybara_ambient_1": "Capybara ambient sound",
+  "sounds.termc.capybara_ambient_2": "Capybara ambient sound",
+  "sounds.termc.capybara_hurt_1": "Capybara hurt sound",
+  "sounds.termc.capybara_death_1": "Capybara death sound",
+
   "tooltip.termc.chainsaw.tooltip.shift": "Press §eShift§r for more Information",
   "tooltip.termc.chainsaw.tooltip.1": "This §5Chainsaw§r will cut down logs and leaves instantly!",
   "tooltip.termc.chainsaw.tooltip.2": "§5Chainsaw§r go vroom!",

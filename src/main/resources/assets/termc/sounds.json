@@ -10,6 +10,30 @@
     "sounds": [
       "termc:chainsaw_pull"
     ]
+  },
+  "capybara_ambient_1": {
+    "subtitle": "sounds.termc.capybara_ambient_1",
+    "sounds": [
+      "termc:capybara_ambient_1"
+    ]
+  },
+  "capybara_ambient_2": {
+    "subtitle": "sounds.termc.capybara_ambient_2",
+    "sounds": [
+      "termc:capybara_ambient_2"
+    ]
+  },
+  "capybara_hurt_1": {
+    "subtitle": "sounds.termc.capybara_hurt_1",
+    "sounds": [
+      "termc:capybara_hurt_1"
+    ]
+  },
+  "capybara_death_1": {
+    "subtitle": "sounds.termc.capybara_death_1",
+    "sounds": [
+      "termc:capybara_death_1"
+    ]
   }
 }
 

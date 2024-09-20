@@ -7,6 +7,7 @@ import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
@@ -18,6 +19,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
@@ -26,6 +28,7 @@ import net.minecraft.world.biome.BiomeKeys;
 import net.termilu.termc.entity.ModEntities;
 import net.termilu.termc.entity.variant.CapybaraVariant;
 import net.termilu.termc.item.ModItems;
+import net.termilu.termc.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 
 //TODO: Make Capybaras tameable & add interaction with orange
@@ -138,6 +141,27 @@ public class CapybaraEntity extends AnimalEntity {
 
         setVariant(variant);
         return super.initialize(world, difficulty, spawnReason, entityData);
+    }
+
+    /* SOUND */
+
+    @Nullable
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return ModSounds.CAPYBARA_AMBIENT_1;
+    }
+
+    @Nullable
+
+    @Override
+    protected SoundEvent getHurtSound(DamageSource source) {
+        return ModSounds.CAPYBARA_HURT_1;
+    }
+
+    @Nullable
+    @Override
+    protected SoundEvent getDeathSound() {
+        return ModSounds.CAPYBARA_DEATH_1;
     }
 
     //Read and write custom variant data to nbt so variants persist through world saving
