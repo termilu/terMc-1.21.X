@@ -61,6 +61,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         //New Tools
         itemModelGenerator.register(ModItems.CHAINSAW, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CHISEL, Models.GENERATED);
 
         //Handheld Tools
         itemModelGenerator.register(ModItems.FLUORITE_SWORD, Models.HANDHELD);

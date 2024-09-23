@@ -38,6 +38,8 @@ public class ModItems {
     //Custom items
     public static final Item CHAINSAW = registerItem("chainsaw", new ChainsawItem(new Item.Settings().maxDamage(64)));
 
+    public static final Item CHISEL = registerItem("chisel", new ChiselItem(new Item.Settings().maxDamage(64)));
+
     public static final Item LAPIS_TORCH = registerItem("lapis_torch",
             new LapisTorchItem(ModBlocks.LAPIS_TORCH, ModBlocks.LAPIS_WALL_TORCH, new Item.Settings(), Direction.DOWN));
 
