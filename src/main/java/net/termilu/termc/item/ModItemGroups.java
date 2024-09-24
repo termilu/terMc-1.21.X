@@ -27,6 +27,8 @@ public class ModItemGroups {
                         //Custom items
                         entries.add(ModItems.CHAINSAW);
                         entries.add(ModItems.CHISEL);
+                        entries.add(ModItems.METAL_DETECTOR);
+                        entries.add(ModItems.DATA_TABLET);
 
                         //Tools
                         entries.add(ModItems.FLUORITE_SWORD);
@@ -135,6 +137,8 @@ public class ModItemGroups {
                     .icon(() -> new ItemStack(ModItems.CHAINSAW)).entries((displayContext, entries) -> {
                         entries.add(ModItems.CHAINSAW);
                         entries.add(ModItems.CHISEL);
+                        entries.add(ModItems.METAL_DETECTOR);
+                        entries.add(ModItems.DATA_TABLET);
 
                         entries.add(ModItems.FLUORITE_SWORD);
                         entries.add(ModItems.FLUORITE_PICKAXE);

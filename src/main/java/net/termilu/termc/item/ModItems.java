@@ -40,6 +40,9 @@ public class ModItems {
 
     public static final Item CHISEL = registerItem("chisel", new ChiselItem(new Item.Settings().maxDamage(64)));
 
+    public static final Item METAL_DETECTOR = registerItem("metal_detector", new MetalDetectorItem(new Item.Settings().maxDamage(200)));
+    public static final Item DATA_TABLET = registerItem("data_tablet", new DataTabletItem(new Item.Settings().maxCount(1)));
+
     public static final Item LAPIS_TORCH = registerItem("lapis_torch",
             new LapisTorchItem(ModBlocks.LAPIS_TORCH, ModBlocks.LAPIS_WALL_TORCH, new Item.Settings(), Direction.DOWN));
 
