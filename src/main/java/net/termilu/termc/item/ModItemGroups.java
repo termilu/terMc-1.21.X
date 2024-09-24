@@ -26,6 +26,7 @@ public class ModItemGroups {
 
                         //Custom items
                         entries.add(ModItems.CHAINSAW);
+                        entries.add(ModItems.CHISEL);
 
                         //Tools
                         entries.add(ModItems.FLUORITE_SWORD);
@@ -46,16 +47,20 @@ public class ModItemGroups {
                         entries.add(ModBlocks.FLUORITE_STAIRS);
                         entries.add(ModBlocks.FLUORITE_SLAB);
 
-                        entries.add(ModBlocks.LAPIS_TORCH);
-                        entries.add(ModBlocks.EMERALD_TORCH);
-
+                        entries.add(ModBlocks.FLUORITE_FENCE);
+                        entries.add(ModBlocks.FLUORITE_FENCE_GATE);
+                        entries.add(ModBlocks.FLUORITE_WALL);
 
                         //Redstone
                         entries.add(ModBlocks.FLUORITE_BUTTON);
                         entries.add(ModBlocks.FLUORITE_PRESSURE_PLATE);
+                        entries.add(ModBlocks.FLUORITE_DOOR);
+                        entries.add(ModBlocks.FLUORITE_TRAPDOOR);
+
+                        entries.add(ModBlocks.LAPIS_TORCH);
+                        entries.add(ModBlocks.EMERALD_TORCH);
 
                         //Custom blocks
-
                         entries.add(ModBlocks.MAGIC_BLOCK);
 
                         //Spawn eggs
@@ -90,6 +95,8 @@ public class ModItemGroups {
 
                         entries.add(ModItems.PINK_GARNET);
                         entries.add(ModItems.RAW_PINK_GARNET);
+
+                        entries.add(ModItems.STAR_FRAGMENT);
                         // Add new Items for Itemgroup fluorite here
 
                     }).build());
@@ -126,6 +133,7 @@ public class ModItemGroups {
                     // Build Icon of Itemgroup
                     .icon(() -> new ItemStack(ModItems.CHAINSAW)).entries((displayContext, entries) -> {
                         entries.add(ModItems.CHAINSAW);
+                        entries.add(ModItems.CHISEL);
 
                         entries.add(ModItems.FLUORITE_SWORD);
                         entries.add(ModItems.FLUORITE_PICKAXE);
@@ -148,6 +156,31 @@ public class ModItemGroups {
                         entries.add(ModItems.STRAWBERRY);
                         entries.add(ModItems.ORANGE);
                         entries.add(ModItems.MANGO);
+
+
+                    }).build());
+
+    public static final ItemGroup REDSTONE_GROUP = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(TerMc.MOD_ID, "redstone"),
+            // Build displayName of Itemgroup
+            FabricItemGroup.builder().displayName(Text.translatable("itemGroup.redstone"))
+                    // Build Icon of Itemgroup
+                    .icon(() -> new ItemStack(ModItems.LAPIS_TORCH)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.LAPIS_TORCH);
+                        entries.add(ModItems.EMERALD_TORCH);
+                        entries.add(ModBlocks.MAGIC_BLOCK);
+
+
+                    }).build());
+
+    public static final ItemGroup SPAWN_EGG_GROUP = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(TerMc.MOD_ID, "spawn_egg"),
+            // Build displayName of Itemgroup
+            FabricItemGroup.builder().displayName(Text.translatable("itemGroup.spawnEggs"))
+                    // Build Icon of Itemgroup
+                    .icon(() -> new ItemStack(ModItems.CAPYBARA_SPAWN_EGG)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.CAPYBARA_SPAWN_EGG);
+                        entries.add(ModItems.DODO_SPAWN_EGG);
 
 
                     }).build());

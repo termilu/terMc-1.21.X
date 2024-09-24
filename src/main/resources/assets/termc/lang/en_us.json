@@ -7,6 +7,7 @@
   "item.termc.raw_pink_garnet": "Raw Pink Garnet",
 
   "item.termc.chainsaw": "Chainsaw",
+  "item.termc.chisel": "Chisel",
 
   "item.termc.fluorite_sword": "Fluorite Sword",
   "item.termc.fluorite_pickaxe": "Fluorite Pickaxe",
@@ -60,9 +61,15 @@
   "sounds.termc.capybara_hurt_1": "Capybara hurt sound",
   "sounds.termc.capybara_death_1": "Capybara death sound",
 
-  "tooltip.termc.chainsaw.tooltip.shift": "Press §eShift§r for more Information",
+  "tooltip.termc.general.tooltip.shift": "Press §eShift§r for more Information",
+
   "tooltip.termc.chainsaw.tooltip.1": "This §5Chainsaw§r will cut down logs and leaves instantly!",
   "tooltip.termc.chainsaw.tooltip.2": "§5Chainsaw§r go vroom!",
+
+  "tooltip.termc.chisel.tooltip.1": "This §5Chisel§r will turn blocks into bricks!",
+  "tooltip.termc.chisel.tooltip.2": "Works on: §5Stone, Endstone, Deepslate, Polished Blackstone, Tuff,§r",
+  "tooltip.termc.chisel.tooltip.3": "§5 Packed Mud, Prismarine, Netherrack and Quartz Block§r!",
+
   "tooltip.termc.magic_block.tooltip.1": "Turns §5Crystals§r into §4Redstone§r or §1Lapis§r",
   "tooltip.termc.star_fragment.tooltip.1": "It burns with the heat of a star",
 

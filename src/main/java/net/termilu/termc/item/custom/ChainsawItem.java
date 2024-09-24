@@ -60,7 +60,7 @@ public class ChainsawItem extends Item {
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         //if Tooltip is showing and shift is held down then display custom tooltip
         if(!Screen.hasShiftDown()){
-            tooltip.add(Text.translatable("tooltip.termc.chainsaw.tooltip.shift"));
+            tooltip.add(Text.translatable("tooltip.termc.general.tooltip.shift"));
         }else{
             tooltip.add(Text.translatable("tooltip.termc.chainsaw.tooltip.1"));
             tooltip.add(Text.translatable("tooltip.termc.chainsaw.tooltip.2"));
