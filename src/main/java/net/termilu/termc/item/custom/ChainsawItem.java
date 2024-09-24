@@ -2,6 +2,7 @@ package net.termilu.termc.item.custom;
 
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
@@ -12,7 +13,10 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
+import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
+import net.termilu.termc.components.ModDataComponentTypes;
 import net.termilu.termc.sound.ModSounds;
 
 import java.util.List;
@@ -41,6 +45,9 @@ public class ChainsawItem extends Item {
                 context.getStack().damage(1, (ServerWorld) world, ((ServerPlayerEntity) context.getPlayer()), item ->
                         Objects.requireNonNull(context.getPlayer()).sendEquipmentBreakStatus(item, EquipmentSlot.MAINHAND));
 
+                //Custom data component
+                context.getStack().set(ModDataComponentTypes.COORDINATES, context.getBlockPos());
+
                 //Play cut sound
                 context.getWorld().playSound(null, context.getBlockPos(), ModSounds.CHAINSAW_CUT, SoundCategory.BLOCKS,
                         1f, 1f);
@@ -56,6 +63,18 @@ public class ChainsawItem extends Item {
         return ActionResult.CONSUME;
     }
 
+    //Delete previous coords to make room for new coords on use
+    @Override
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        ItemStack stack = user.getEquippedStack(EquipmentSlot.MAINHAND);
+
+        if(stack.get(ModDataComponentTypes.COORDINATES) != null){
+            stack.set(ModDataComponentTypes.COORDINATES, null);
+        }
+
+        return TypedActionResult.success(stack);
+    }
+
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         //if Tooltip is showing and shift is held down then display custom tooltip
@@ -64,6 +83,12 @@ public class ChainsawItem extends Item {
         }else{
             tooltip.add(Text.translatable("tooltip.termc.chainsaw.tooltip.1"));
             tooltip.add(Text.translatable("tooltip.termc.chainsaw.tooltip.2"));
+        }
+
+        //add tooltip from component if coordinates aren't null
+        if (stack.get(ModDataComponentTypes.COORDINATES) != null) {
+            //show coords of last chopped tree
+            tooltip.add(Text.literal("Last Chopped Tree at " + stack.get(ModDataComponentTypes.COORDINATES)));
         }
 
         super.appendTooltip(stack, context, tooltip, type);
