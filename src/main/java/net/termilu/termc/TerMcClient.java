@@ -8,6 +8,7 @@ import net.minecraft.client.render.RenderLayer;
 import net.termilu.termc.block.ModBlocks;
 import net.termilu.termc.entity.ModEntities;
 import net.termilu.termc.entity.client.*;
+import net.termilu.termc.util.ModModelPredicates;
 
 public class TerMcClient implements ClientModInitializer {
     @Override
@@ -27,5 +28,8 @@ public class TerMcClient implements ClientModInitializer {
 
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.CAPYBARA, CapybaraModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.CAPYBARA, CapybaraRenderer::new);
+
+        //ModelPredicates
+        ModModelPredicates.registerModelPredicates();
     }
 }
