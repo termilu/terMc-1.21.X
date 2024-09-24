@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "termc:item/data_tablet_off"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "termc:on": 1
+      },
+      "model": "termc:item/data_tablet_on"
+    }
+  ]
+}
