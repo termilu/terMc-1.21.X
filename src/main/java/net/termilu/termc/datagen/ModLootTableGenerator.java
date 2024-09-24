@@ -27,7 +27,10 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
     public void generate() {
         //Generate dropping Block when its mined
         addDrop(ModBlocks.FLUORITE_BLOCK);
+
         addDrop(ModBlocks.MAGIC_BLOCK);
+        addDrop(ModBlocks.FLUORITE_LAMP);
+
         addDrop(ModBlocks.FLUORITE_STAIRS);
 
         addDrop(ModBlocks.LAPIS_TORCH);

@@ -109,6 +109,13 @@ public class ModBlocks {
                     .strength(1f)
                     .requiresTool()));
 
+    public static final Block FLUORITE_LAMP = registerBlock("fluorite_lamp",
+            new FluoriteLampBlock(AbstractBlock.Settings.create()
+                    .strength(1f)
+                    .requiresTool()
+                    //get state from FluoriteLampBlock, if on create light source with strength 15, else 0
+                    .luminance(state -> state.get(FluoriteLampBlock.CLICKED) ? 15 : 0)));
+
     public static final Block LAPIS_TORCH = registerBlock("lapis_torch",
             new LapisTorch(AbstractBlock.Settings.create()
                     .noCollision()

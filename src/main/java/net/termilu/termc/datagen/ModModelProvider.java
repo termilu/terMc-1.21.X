@@ -2,12 +2,10 @@ package net.termilu.termc.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Model;
-import net.minecraft.data.client.Models;
+import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
 import net.termilu.termc.block.ModBlocks;
+import net.termilu.termc.block.custom.FluoriteLampBlock;
 import net.termilu.termc.item.ModItems;
 
 import java.util.Optional;
@@ -48,6 +46,14 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoor(ModBlocks.FLUORITE_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.FLUORITE_TRAPDOOR);
 
+        //Blockstate lamps
+        //Lamp off
+        Identifier lampOffIdentifier = TexturedModel.CUBE_ALL.upload(ModBlocks.FLUORITE_LAMP, blockStateModelGenerator.modelCollector);
+        //Lamp on
+        Identifier lampOnIdentifier = blockStateModelGenerator.createSubModel(ModBlocks.FLUORITE_LAMP, "_on", Models.CUBE_ALL, TextureMap::all);
+        //Magic json generation wizardry
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ModBlocks.FLUORITE_LAMP)
+                .coordinate(BlockStateModelGenerator.createBooleanModelMap(FluoriteLampBlock.CLICKED, lampOnIdentifier, lampOffIdentifier)));
     }
 
     //Generate Mod Item models jsons
@@ -86,5 +92,6 @@ public class ModModelProvider extends FabricModelProvider {
 
         //Fuel
         itemModelGenerator.register(ModItems.STAR_FRAGMENT, Models.GENERATED);
+
     }
 }

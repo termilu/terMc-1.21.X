@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "clicked=false": {
+      "model": "termc:block/fluorite_lamp"
+    },
+    "clicked=true": {
+      "model": "termc:block/fluorite_lamp_on"
+    }
+  }
+}

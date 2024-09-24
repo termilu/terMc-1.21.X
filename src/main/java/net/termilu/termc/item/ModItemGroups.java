@@ -62,6 +62,7 @@ public class ModItemGroups {
 
                         //Custom blocks
                         entries.add(ModBlocks.MAGIC_BLOCK);
+                        entries.add(ModBlocks.FLUORITE_LAMP);
 
                         //Spawn eggs
                         entries.add(ModItems.DODO_SPAWN_EGG);
@@ -169,6 +170,7 @@ public class ModItemGroups {
                         entries.add(ModItems.LAPIS_TORCH);
                         entries.add(ModItems.EMERALD_TORCH);
                         entries.add(ModBlocks.MAGIC_BLOCK);
+                        entries.add(ModBlocks.FLUORITE_LAMP);
 
 
                     }).build());
