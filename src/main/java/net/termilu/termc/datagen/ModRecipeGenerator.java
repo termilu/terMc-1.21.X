@@ -93,6 +93,19 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .offerTo(exporter);
 
         //Tools
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.TERM_BOW)
+                //Recipe
+                .pattern(" FI")
+                .pattern("S I")
+                .pattern(" FI")
+                //Define input patternStr
+                .input('F', ModItems.FLUORITE)
+                .input('S', Items.STICK)
+                .input('I', Items.STRING)
+                //Unlock recipe in recipe book if you pick up this items
+                .criterion(hasItem(ModItems.FLUORITE), conditionsFromItem(ModItems.FLUORITE))
+                .offerTo(exporter);
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.FLUORITE_SWORD)
                 //Recipe
                 .pattern("F")

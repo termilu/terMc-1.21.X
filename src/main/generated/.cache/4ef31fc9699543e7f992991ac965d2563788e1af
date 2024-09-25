@@ -1,5 +1,6 @@
-// 1.21	2024-09-25T16:56:52.8364245	terMc/Recipes
+// 1.21	2024-09-25T17:27:01.4248753	terMc/Recipes
 9f5b109216d27100c487fb73de8716c4105cd551 data\termc\advancement\recipes\tools\fluorite_axe.json
+ec94a668cfddd5f5f59869c2a5fa558c345bc834 data\termc\recipe\term_bow.json
 566f464828a94431c5c703c7c5d7c7d32c161362 data\termc\recipe\fluorite_from_blasting_fluorite_end_ore.json
 00b722601e418a965af1021d273cf2dfdc9b35ea data\termc\recipe\fluorite_axe.json
 2e540e4e351cbe32d1416439df2249d30ee2adc6 data\termc\advancement\recipes\tools\fluorite_multitool.json
@@ -35,6 +36,7 @@ bf970dc082e5056795971ee43e91d116e6a3d7da data\termc\recipe\fluorite_from_blastin
 7e96cdb57a2db322ee5529b40770c0dc5efef820 data\termc\recipe\fluorite_from_smelting_fluorite_nether_ore.json
 cca50ffe3077dc85da2f3f2f48f6563f63077fd2 data\termc\recipe\emerald_torch.json
 743af54dc7b6e67b76fa16c9803f83a650d79bfa data\termc\advancement\recipes\misc\magic_block.json
+92712697ee36a1564810f943af3125b2072be884 data\termc\advancement\recipes\combat\term_bow.json
 4d1b75d198cf0ba372a575dfa35ace5559835e64 data\termc\recipe\magic_block_2.json
 780b6386d9546d9d94c219905fa92e07b12dc054 data\termc\advancement\recipes\misc\fluorite_from_smelting_fluorite_ore.json
 ae1e1bca197dd4e9751c6bd57501b5499031b44f data\termc\recipe\fluorite_from_blasting_fluorite_deepslate_ore.json
