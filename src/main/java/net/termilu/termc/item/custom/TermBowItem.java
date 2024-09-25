@@ -13,7 +13,7 @@ public class TermBowItem extends BowItem {
     @Override
     protected void shoot(LivingEntity shooter, ProjectileEntity projectile, int index, float speed, float divergence, float yaw, LivingEntity target) {
         if (projectile instanceof ArrowEntity) {
-            ((ArrowEntity) projectile).setDamage(((ArrowEntity) projectile).getDamage() * 1.5); // Double the damage
+            ((ArrowEntity) projectile).setDamage(((ArrowEntity) projectile).getDamage() * 1.5); // Increase the damage
         }
         super.shoot(shooter, projectile, index, speed, divergence, yaw, target);
     }
