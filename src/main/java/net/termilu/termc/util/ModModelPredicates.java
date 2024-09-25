@@ -7,8 +7,7 @@ import net.termilu.termc.TerMc;
 import net.termilu.termc.components.ModDataComponentTypes;
 import net.termilu.termc.item.ModItems;
 
-import static net.fabricmc.fabric.api.object.builder.v1.client.model.FabricModelPredicateProviderRegistry.register;
-
+import static net.minecraft.client.item.ModelPredicateProviderRegistry.register;
 public class ModModelPredicates {
     //Predicates register in TerMcClient
     //MANUALLY CREATE JSON FOR MODELPREDICATE ITEMS!! (resources/assets/termc/models)
