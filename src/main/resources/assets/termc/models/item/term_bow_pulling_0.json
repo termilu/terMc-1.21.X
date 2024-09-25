@@ -1,0 +1,6 @@
+{
+    "parent": "termc:item/term_bow",
+    "textures": {
+        "layer0": "termc:item/term_bow_pulling_0"
+    }
+}
