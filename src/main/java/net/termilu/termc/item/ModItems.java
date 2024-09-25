@@ -95,7 +95,10 @@ public class ModItems {
         }
     });
 
-    //Tools
+    //Tools & Weapons
+    public static final Item TERM_BOW = registerItem("term_bow",
+            new TermBowItem(new Item.Settings().maxDamage(500)));   //maxDamage is durability of the tool
+
     public static final Item FLUORITE_SWORD = registerItem("fluorite_sword",
             new SwordItem(ModToolMaterials.FLUORITE,
                     new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.FLUORITE,
@@ -132,6 +135,7 @@ public class ModItems {
             new HammerItem(ModToolMaterials.FLUORITE,
                     new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(
                             ModToolMaterials.FLUORITE, 5, -2f))));
+
 
     //Registering item with unique identifier
     private static Item registerItem(String name, Item item){

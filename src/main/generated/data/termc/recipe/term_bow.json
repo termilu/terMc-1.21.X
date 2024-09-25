@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "F": {
+      "item": "termc:fluorite"
+    },
+    "I": {
+      "item": "minecraft:string"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " FI",
+    "S I",
+    " FI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "termc:term_bow"
+  }
+}
