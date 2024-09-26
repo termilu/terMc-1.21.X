@@ -18,6 +18,7 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 import net.termilu.termc.components.ModDataComponentTypes;
 import net.termilu.termc.sound.ModSounds;
+import net.termilu.termc.util.PlayerUtils;
 
 import java.util.List;
 import java.util.Objects;
@@ -31,13 +32,14 @@ public class ChainsawItem extends Item {
     public ActionResult useOnBlock(ItemUsageContext context) {
         //Get world reference
         World world = context.getWorld();
+        PlayerEntity player = context.getPlayer();
 
         //only execute on server, client can't break blocks
         if(!world.isClient()){
             //Is the block we are using the item on a log or leaves while it's also not raining?
             if(((world.getBlockState(context.getBlockPos()).isIn(BlockTags.LOGS)) ||
                     world.getBlockState(context.getBlockPos()).isIn(BlockTags.LEAVES)) &&
-                    (!context.getWorld().isRaining())){
+                    (!context.getWorld().isRaining() || PlayerUtils.hasRoofOverhead(world, player.getBlockPos()))){
 
                 //then let the player instantly break the block and drop it
                 world.breakBlock(context.getBlockPos(), true, context.getPlayer());

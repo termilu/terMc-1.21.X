@@ -1,14 +1,19 @@
 package net.termilu.termc;
 
 import net.fabricmc.api.ModInitializer;
-
+import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
+import net.fabricmc.fabric.api.event.player.UseBlockCallback;
+import net.fabricmc.fabric.api.event.player.UseItemCallback;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.termilu.termc.block.ModBlocks;
 import net.termilu.termc.components.ModDataComponentTypes;
 import net.termilu.termc.entity.ModEntities;
 import net.termilu.termc.entity.custom.CapybaraEntity;
 import net.termilu.termc.entity.custom.DodoEntity;
+import net.termilu.termc.event.AttackEntityHandler;
+import net.termilu.termc.event.UseBlockCallbackHandler;
+import net.termilu.termc.event.UseItemCallbackHandler;
 import net.termilu.termc.item.ModItemGroups;
 import net.termilu.termc.item.ModItems;
 import net.termilu.termc.sound.ModSounds;
@@ -41,5 +46,9 @@ public class TerMc implements ModInitializer {
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 
 		ModDataComponentTypes.registerDataComponentTypes();
+
+		AttackEntityCallback.EVENT.register(new AttackEntityHandler());
+		UseItemCallback.EVENT.register(new UseItemCallbackHandler());
+		UseBlockCallback.EVENT.register(new UseBlockCallbackHandler());
 	}
 }
