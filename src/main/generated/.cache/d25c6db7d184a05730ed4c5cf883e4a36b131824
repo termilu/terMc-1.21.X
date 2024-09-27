@@ -1,4 +1,4 @@
-// 1.21	2024-09-25T17:27:01.4228757	terMc/Model Definitions
+// 1.21	2024-09-26T19:45:52.5329358	terMc/Model Definitions
 bcf854e2aece106ca796a0b31f3db6b2b71d819c assets\termc\models\item\raw_fluorite.json
 0fb1fbd85516f84f4f2184e406bd72f77d438cf2 assets\termc\models\block\magic_block.json
 885ee1c53cbe9936eadeaed49cfbe32db3137813 assets\termc\blockstates\fluorite_end_ore.json
@@ -77,6 +77,7 @@ bcdf7457ed6605b6da32e3d04c8e92c4ebf79757 assets\termc\models\block\fluorite_pres
 9945d406a292e877709be363e1beb6d234bac82f assets\termc\models\block\fluorite_fence_gate_open.json
 d63fdba380d05fc9112507ff12f4db2148193e1c assets\termc\models\item\fluorite_wall.json
 75239b8552260e3f4bfa99e9ee7b8e9dfa5441c4 assets\termc\models\block\fluorite_trapdoor_top.json
+ec02a676b9d180931b511c13ffa6fccc0bf8e460 assets\termc\models\item\poisoned_diamond_sword.json
 3026a65a070f20208545391ad2a091f8d928c241 assets\termc\models\block\fluorite_button.json
 3a2438b19f5ad001ea9883b340296d06897d9be5 assets\termc\models\item\fluorite_fence_gate.json
 20b7f1c14f81235268006e6db5697aecd0512c7d assets\termc\blockstates\fluorite_ore.json
