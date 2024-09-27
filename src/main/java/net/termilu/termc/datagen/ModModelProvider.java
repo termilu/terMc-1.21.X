@@ -72,6 +72,8 @@ public class ModModelProvider extends FabricModelProvider {
         //itemModelGenerator.register(ModItems.DATA_TABLET, Models.GENERATED);
 
         //Handheld Tools
+        itemModelGenerator.register(ModItems.POISONED_DIAMOND_SWORD, Models.HANDHELD);
+
         itemModelGenerator.register(ModItems.FLUORITE_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.FLUORITE_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.FLUORITE_AXE, Models.HANDHELD);

@@ -2,6 +2,7 @@ package net.termilu.termc.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
@@ -95,7 +96,20 @@ public class ModItems {
         }
     });
 
+    //Sword baseAttackDamage always 3, baseAttackSpeed always -2.4f
     //Tools & Weapons
+    public static final Item POISONED_DIAMOND_SWORD = registerItem("poisoned_diamond_sword",
+            new ModEffectSwordItem(ToolMaterials.DIAMOND,
+                    new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.DIAMOND,
+                            //Sword baseAttackDamage always 3, baseAttackSpeed always -2.4f
+                            swordBaseAttackDamage, swordBaseAttackSpeed)), StatusEffects.POISON) {
+                @Override
+                public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+                    tooltip.add(Text.translatable("tooltip.termc.poisoned_diamond_sword.tooltip.1"));
+                    super.appendTooltip(stack, context, tooltip, type);
+                }
+            });
+
     public static final Item TERM_BOW = registerItem("term_bow",
             new TermBowItem(new Item.Settings().maxDamage(500)));   //maxDamage is durability of the tool
 

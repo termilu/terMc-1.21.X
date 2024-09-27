@@ -31,6 +31,8 @@ public class ModItemGroups {
                         entries.add(ModItems.DATA_TABLET);
 
                         //Tools
+                        entries.add(ModItems.POISONED_DIAMOND_SWORD);
+
                         entries.add(ModItems.TERM_BOW);
 
                         entries.add(ModItems.FLUORITE_SWORD);
@@ -141,6 +143,8 @@ public class ModItemGroups {
                         entries.add(ModItems.CHISEL);
                         entries.add(ModItems.METAL_DETECTOR);
                         entries.add(ModItems.DATA_TABLET);
+
+                        entries.add(ModItems.POISONED_DIAMOND_SWORD);
 
                         entries.add(ModItems.TERM_BOW);
 
