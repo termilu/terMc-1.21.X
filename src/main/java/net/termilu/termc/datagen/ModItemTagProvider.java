@@ -33,8 +33,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ItemTags.PLANKS)
                 .add(ModBlocks.BLACKWOOD_PLANKS.asItem());
 
+        //Add Blackwood Logs to Blackwood Logs item
+        getOrCreateTagBuilder(ModTags.Items.BLACKWOOD_LOGS_ITEM)
+                .add(ModBlocks.BLACKWOOD_LOG.asItem(), ModBlocks.BLACKWOOD_WOOD.asItem(),
+                        ModBlocks.STRIPPED_BLACKWOOD_LOG.asItem(), ModBlocks.STRIPPED_BLACKWOOD_WOOD.asItem());
 
-        //Magical wizard shit
-        copy(ModTags.Blocks.BLACKWOOD_LOGS, ModTags.Items.BLACKWOOD_LOGS_ITEM);
+
     }
 }

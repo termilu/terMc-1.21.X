@@ -1,4 +1,4 @@
-// 1.21	2024-09-28T00:12:44.1120731	terMc/Model Definitions
+// 1.21	2024-09-28T00:48:36.0531679	terMc/Model Definitions
 bcf854e2aece106ca796a0b31f3db6b2b71d819c assets\termc\models\item\raw_fluorite.json
 0fb1fbd85516f84f4f2184e406bd72f77d438cf2 assets\termc\models\block\magic_block.json
 885ee1c53cbe9936eadeaed49cfbe32db3137813 assets\termc\blockstates\fluorite_end_ore.json
@@ -68,8 +68,8 @@ eaa3998f4e56f3cd8552791a7d0c8944971691db assets\termc\models\block\fluorite_wall
 92348f4b44879d2333f530be3da9c6f9a5c38fe2 assets\termc\models\block\blackwood_wood.json
 905a4ed8ef8319aaeb19c7fd90b1679ddd3ca623 assets\termc\blockstates\fluorite_deepslate_ore.json
 27793cf7545336cd65204c2a9c28e20cb8cf98df assets\termc\blockstates\fluorite_block.json
-b1abdad3d2c5f3a09e07c780a5d1e60b6166d438 assets\termc\models\item\fluorite_button.json
 2cca06e18ac9d9bcc8a091f45aeeb9de67025eac assets\termc\models\block\fluorite_door_bottom_left_open.json
+b1abdad3d2c5f3a09e07c780a5d1e60b6166d438 assets\termc\models\item\fluorite_button.json
 1ae412c6d2c2508d4fa2cb3d2ae098b451b3c56f assets\termc\models\block\stripped_blackwood_log_horizontal.json
 705e9b9c7a2858420d3048e67a93381ea4f3c7f8 assets\termc\models\block\fluorite_trapdoor_bottom.json
 68e8c6a7d1e3c78db194939a9545a1140910c560 assets\termc\models\item\fluorite_end_ore.json

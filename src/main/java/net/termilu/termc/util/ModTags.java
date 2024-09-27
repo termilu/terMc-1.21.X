@@ -15,7 +15,9 @@ public class ModTags {
         public static final TagKey<Block> INCORRECT_FOR_FLUORITE_TOOL = createTag("incorrect_for_fluorite_tool");
         public static final TagKey<Block> MULTITOOL_MINEABLE = createTag("multitool_mineable");
 
+
         public static final TagKey<Block> BLACKWOOD_LOGS = createTag("blackwood_logs");
+
 
         private static TagKey<Block> createTag(String name){
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(TerMc.MOD_ID, name));
@@ -28,6 +30,8 @@ public class ModTags {
         public static final TagKey<Item> TRANSFORMABLE_ITEMS = createTag("transformable_items");
 
         public static final TagKey<Item> BLACKWOOD_LOGS_ITEM = createTag("blackwood_logs_item");
+
+
         private static TagKey<Item> createTag(String name){
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(TerMc.MOD_ID, name));
 
