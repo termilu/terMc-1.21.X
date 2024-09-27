@@ -214,5 +214,47 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.FLUORITE_AXE), conditionsFromItem(ModItems.FLUORITE_AXE))
                 .criterion(hasItem(ModItems.FLUORITE_SHOVEL), conditionsFromItem(ModItems.FLUORITE_SHOVEL))
                 .offerTo(exporter);
+
+        //Armor
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.FLUORITE_HELMET)
+                //Recipe
+                .pattern("FFF")
+                .pattern("F F")
+                //Define input patternStr
+                .input('F', ModItems.FLUORITE)
+                //Unlock recipe in recipe book if you pick up this items
+                .criterion(hasItem(ModItems.FLUORITE), conditionsFromItem(ModItems.FLUORITE))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.FLUORITE_CHESTPLATE)
+                //Recipe
+                .pattern("F F")
+                .pattern("FFF")
+                //Define input patternStr
+                .input('F', ModItems.FLUORITE)
+                //Unlock recipe in recipe book if you pick up this items
+                .criterion(hasItem(ModItems.FLUORITE), conditionsFromItem(ModItems.FLUORITE))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.FLUORITE_LEGGINGS)
+                //Recipe
+                .pattern("FFF")
+                .pattern("F F")
+                .pattern("F F")
+                //Define input patternStr
+                .input('F', ModItems.FLUORITE)
+                //Unlock recipe in recipe book if you pick up this items
+                .criterion(hasItem(ModItems.FLUORITE), conditionsFromItem(ModItems.FLUORITE))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.FLUORITE_BOOTS)
+                //Recipe
+                .pattern("F F")
+                .pattern("F F")
+                //Define input patternStr
+                .input('F', ModItems.FLUORITE)
+                //Unlock recipe in recipe book if you pick up this items
+                .criterion(hasItem(ModItems.FLUORITE), conditionsFromItem(ModItems.FLUORITE))
+                .offerTo(exporter);
     }
 }

@@ -82,6 +82,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.FLUORITE_MULTITOOL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.FLUORITE_HAMMER, Models.HANDHELD);
 
+        //Armor
+        itemModelGenerator.register(ModItems.FLUORITE_HELMET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FLUORITE_CHESTPLATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FLUORITE_LEGGINGS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FLUORITE_BOOTS, Models.GENERATED);
+
         //Spawn eggs
         itemModelGenerator.register(ModItems.DODO_SPAWN_EGG,
                 new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));

@@ -43,6 +43,12 @@ public class ModItemGroups {
                         entries.add(ModItems.FLUORITE_MULTITOOL);
                         entries.add(ModItems.FLUORITE_HAMMER);
 
+                        //Armor
+                        entries.add(ModItems.FLUORITE_HELMET);
+                        entries.add(ModItems.FLUORITE_CHESTPLATE);
+                        entries.add(ModItems.FLUORITE_LEGGINGS);
+                        entries.add(ModItems.FLUORITE_BOOTS);
+
                         //Blocks
                         entries.add(ModBlocks.FLUORITE_BLOCK);
                         entries.add(ModBlocks.FLUORITE_ORE);
@@ -155,6 +161,21 @@ public class ModItemGroups {
                         entries.add(ModItems.FLUORITE_HOE);
                         entries.add(ModItems.FLUORITE_MULTITOOL);
                         entries.add(ModItems.FLUORITE_HAMMER);
+
+                        // Add new Items for Itemgroup fluorite_blocks here
+
+                    }).build());
+
+    public static final ItemGroup FLUORITE_ARMOR_GROUP = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(TerMc.MOD_ID, "fluorite_armor"),
+            // Build displayName of Itemgroup
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.fluorite_armor"))
+                    // Build Icon of Itemgroup
+                    .icon(() -> new ItemStack(ModItems.FLUORITE_CHESTPLATE)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.FLUORITE_HELMET);
+                        entries.add(ModItems.FLUORITE_CHESTPLATE);
+                        entries.add(ModItems.FLUORITE_LEGGINGS);
+                        entries.add(ModItems.FLUORITE_BOOTS);
 
                         // Add new Items for Itemgroup fluorite_blocks here
 

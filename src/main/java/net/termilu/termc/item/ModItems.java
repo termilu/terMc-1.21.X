@@ -150,6 +150,30 @@ public class ModItems {
                     new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(
                             ModToolMaterials.FLUORITE, 5, -2f))));
 
+    //Armor
+    public static final Item FLUORITE_HELMET = registerItem("fluorite_helmet",
+            new ModArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(22))
+                            ));
+    public static final Item FLUORITE_CHESTPLATE = registerItem("fluorite_chestplate",
+            new ModArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(22))
+                            ));
+
+    public static final Item FLUORITE_LEGGINGS = registerItem("fluorite_leggings",
+            new ModArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(22))
+                            ));
+
+    public static final Item FLUORITE_BOOTS = registerItem("fluorite_boots",
+            new ModArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(22))
+                            ));
+
+
+
+
+
 
     //Registering item with unique identifier
     private static Item registerItem(String name, Item item){
