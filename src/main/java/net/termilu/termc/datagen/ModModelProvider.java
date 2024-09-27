@@ -46,6 +46,25 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoor(ModBlocks.FLUORITE_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.FLUORITE_TRAPDOOR);
 
+        //Logs
+        blockStateModelGenerator.registerLog(ModBlocks.BLACKWOOD_LOG)
+                .log(ModBlocks.BLACKWOOD_LOG)
+                .wood(ModBlocks.BLACKWOOD_WOOD);
+
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_BLACKWOOD_LOG)
+                .log(ModBlocks.STRIPPED_BLACKWOOD_LOG)
+                .wood(ModBlocks.STRIPPED_BLACKWOOD_WOOD);
+
+        //Planks
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLACKWOOD_PLANKS);
+
+        //Leaves
+        blockStateModelGenerator.registerSingleton(ModBlocks.BLACKWOOD_LEAVES, TexturedModel.LEAVES);
+
+        //Sapling
+        blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.BLACKWOOD_SAPLING,
+                BlockStateModelGenerator.TintType.NOT_TINTED);
+
         //Blockstate lamps
         //Lamp off
         Identifier lampOffIdentifier = TexturedModel.CUBE_ALL.upload(ModBlocks.FLUORITE_LAMP, blockStateModelGenerator.modelCollector);
@@ -69,7 +88,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CHAINSAW, Models.GENERATED);
         itemModelGenerator.register(ModItems.CHISEL, Models.GENERATED);
         itemModelGenerator.register(ModItems.METAL_DETECTOR, Models.GENERATED);
-        //itemModelGenerator.register(ModItems.DATA_TABLET, Models.GENERATED);
+        // Data Tablet is handled by ModModelPredicates
+        // itemModelGenerator.register(ModItems.DATA_TABLET, Models.GENERATED);
 
         //Handheld Tools
         itemModelGenerator.register(ModItems.POISONED_DIAMOND_SWORD, Models.HANDHELD);
@@ -102,6 +122,5 @@ public class ModModelProvider extends FabricModelProvider {
 
         //Fuel
         itemModelGenerator.register(ModItems.STAR_FRAGMENT, Models.GENERATED);
-
     }
 }

@@ -36,6 +36,20 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.LAPIS_TORCH);
         addDrop(ModBlocks.EMERALD_TORCH);
 
+        //Trees
+        addDrop(ModBlocks.BLACKWOOD_LOG);
+        addDrop(ModBlocks.BLACKWOOD_WOOD);
+
+        addDrop(ModBlocks.STRIPPED_BLACKWOOD_LOG);
+        addDrop(ModBlocks.STRIPPED_BLACKWOOD_WOOD);
+
+        addDrop(ModBlocks.BLACKWOOD_PLANKS);
+
+        addDrop(ModBlocks.BLACKWOOD_SAPLING);
+
+        addDrop(ModBlocks.BLACKWOOD_LEAVES, leavesDrops(ModBlocks.BLACKWOOD_LEAVES, ModBlocks.BLACKWOOD_SAPLING, 0.0625f));
+
+
         //Double-Blocks need extra typeDrops otherwise they drop twice
         addDrop(ModBlocks.FLUORITE_SLAB, slabDrops(ModBlocks.FLUORITE_SLAB));
         addDrop(ModBlocks.FLUORITE_DOOR, doorDrops(ModBlocks.FLUORITE_DOOR));

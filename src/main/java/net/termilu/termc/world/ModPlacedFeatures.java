@@ -5,19 +5,21 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.FeatureConfig;
-import net.minecraft.world.gen.feature.PlacedFeature;
+import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 import net.termilu.termc.TerMc;
+import net.termilu.termc.block.ModBlocks;
 
 import java.util.List;
 
 /**
  * Class responsible for registering custom placed features in the mod.
+ * Handels how features are placed in the world.
  */
 public class ModPlacedFeatures {
+
+    // Registry key for the Blackwood placed feature
+    public static final RegistryKey<PlacedFeature> BLACKWOOD_PLACED_KEY = registerKey("blackwood_placed");
 
     /**
      * Bootstraps the registration of placed features.
@@ -26,6 +28,20 @@ public class ModPlacedFeatures {
      */
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
+
+        register(context, BLACKWOOD_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.BLACKWOOD_KEY),
+                //This method ensures that the tree will only be placed if it can survive in the given conditions.
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                        /*  Place 2 trees with a 10% chance of 2 extra trees.
+                            IMPORTANT: 1 / extraChance parameter has to be an integer.
+                            Example:
+                            1 / 0.1 = 10 -> 10% chance
+                            1 / 0.5 = 2 -> 50% chance
+                            1 / 0.3 = 3.3333 -> Cannot be used
+                        */
+                        PlacedFeatures.createCountExtraModifier(2, 0.1f, 2), ModBlocks.BLACKWOOD_SAPLING));
+
+        // Add more placed features here
     }
 
     /**

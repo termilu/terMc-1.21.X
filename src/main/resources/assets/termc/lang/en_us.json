@@ -44,6 +44,14 @@
   "block.termc.fluorite_nether_ore": "Fluorite Nether Ore",
   "block.termc.fluorite_end_ore": "Fluorite End Ore",
 
+  "block.termc.blackwood_log": "Blackwood Log",
+  "block.termc.blackwood_wood": "Blackwood Wood",
+  "block.termc.stripped_blackwood_log": "Stripped Blackwood Log",
+  "block.termc.stripped_blackwood_wood": "Stripped Blackwood Wood",
+  "block.termc.blackwood_planks": "Blackwood Planks",
+  "block.termc.blackwood_leaves": "Blackwood Leaves",
+  "block.termc.blackwood_sapling": "Blackwood Sapling",
+
   "block.termc.magic_block": "Magic Block",
   "block.termc.fluorite_lamp": "Fluorite Lamp",
 
@@ -63,6 +71,7 @@
 
   "itemgroup.termc":  "terMc Items",
   "itemgroup.ore":  "Ores",
+  "itemGroup.building_blocks": "Building Blocks",
   "itemgroup.fluorite_blocks": "Fluorite Blocks",
   "itemgroup.food":  "Food",
   "itemgroup.tools": "Tools",
@@ -95,5 +104,6 @@
   "tooltip.termc.strawberry.tooltip.1": "A juicy snack",
   "tooltip.termc.orange.tooltip.1": "Maybe you could make a furry friend with these?",
   "tooltip.termc.mango.tooltip.1": "The refreshing taste makes you sprint faster for a little while."
+
 
 }

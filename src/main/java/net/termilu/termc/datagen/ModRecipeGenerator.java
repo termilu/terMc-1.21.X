@@ -13,6 +13,7 @@ import net.minecraft.util.Identifier;
 import net.termilu.termc.TerMc;
 import net.termilu.termc.block.ModBlocks;
 import net.termilu.termc.item.ModItems;
+import net.termilu.termc.util.ModTags;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -256,5 +257,38 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 //Unlock recipe in recipe book if you pick up this items
                 .criterion(hasItem(ModItems.FLUORITE), conditionsFromItem(ModItems.FLUORITE))
                 .offerTo(exporter);
+
+        //Logs & Wood -> Planks
+//        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACKWOOD_PLANKS, 4)
+//                .input(ModBlocks.BLACKWOOD_LOG)
+//                .criterion(hasItem(ModBlocks.BLACKWOOD_LOG), conditionsFromItem(ModBlocks.BLACKWOOD_LOG))
+//                .offerTo(exporter);
+//
+//        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACKWOOD_PLANKS, 4)
+//                .input(ModBlocks.BLACKWOOD_WOOD)
+//                .criterion(hasItem(ModBlocks.BLACKWOOD_WOOD), conditionsFromItem(ModBlocks.BLACKWOOD_WOOD))
+//                .offerTo(exporter);
+//
+//        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACKWOOD_PLANKS, 4)
+//                .input(ModBlocks.STRIPPED_BLACKWOOD_LOG)
+//                .criterion(hasItem(ModBlocks.STRIPPED_BLACKWOOD_LOG), conditionsFromItem(ModBlocks.STRIPPED_BLACKWOOD_LOG))
+//                .offerTo(exporter);
+
+
+        // Log -> Planks
+        // Define the custom logs tag
+//        TagKey<Item> BLACKWOOD_LOGS = TagKey.of(Registries.ITEM.getKey(), Identifier.of(TerMc.MOD_ID, "blackwood_logs"));
+
+//        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACKWOOD_PLANKS, 4)
+//                .input(BLACKWOOD_LOGS)
+//                .criterion(hasItem(ModBlocks.STRIPPED_BLACKWOOD_WOOD), conditionsFromItem(ModBlocks.STRIPPED_BLACKWOOD_WOOD))
+//                .offerTo(exporter);
+
+
+//
+//        // Corrected usage of offerPlanksRecipe for log -> planks recipes
+        offerPlanksRecipe(exporter, ModBlocks.BLACKWOOD_PLANKS, ModTags.Items.BLACKWOOD_LOGS_ITEM, 4);
+
+
     }
 }

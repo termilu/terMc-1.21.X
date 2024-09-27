@@ -63,5 +63,16 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .forceAddTag(BlockTags.PICKAXE_MINEABLE)
                 .forceAddTag(BlockTags.AXE_MINEABLE)
                 .forceAddTag(BlockTags.SHOVEL_MINEABLE);
+
+        //Tree Logs and Wood (that can burn)
+        //Needs to be added to BlockTags.LOGS_THAT_BURN otherwise leaves will decay
+        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.BLACKWOOD_LOG, ModBlocks.BLACKWOOD_WOOD,
+                        ModBlocks.STRIPPED_BLACKWOOD_LOG, ModBlocks.STRIPPED_BLACKWOOD_WOOD);
+
+
+        getOrCreateTagBuilder(ModTags.Blocks.BLACKWOOD_LOGS)
+                .add(ModBlocks.BLACKWOOD_LOG, ModBlocks.BLACKWOOD_WOOD,
+                        ModBlocks.STRIPPED_BLACKWOOD_LOG, ModBlocks.STRIPPED_BLACKWOOD_WOOD);
     }
 }

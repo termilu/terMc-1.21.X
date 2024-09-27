@@ -4,15 +4,26 @@ import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.FeatureConfig;
+import net.minecraft.world.gen.feature.TreeFeatureConfig;
+import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
+import net.minecraft.world.gen.foliage.CherryFoliagePlacer;
+import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 import net.termilu.termc.TerMc;
+import net.termilu.termc.block.ModBlocks;
 
 /**
  * Class responsible for registering custom configured features in the mod.
+ * Handels how e.g. trees are going to look like.
  */
 public class ModConfiguredFeatures {
+
+    // Registry key for the Blackwood tree feature
+    public static final RegistryKey<ConfiguredFeature<?, ?>> BLACKWOOD_KEY = registerKey("blackwood_configured");
 
     /**
      * Bootstraps the registration of configured features.
@@ -20,7 +31,24 @@ public class ModConfiguredFeatures {
      * @param context The registerable context for configured features.
      */
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
-        // register(context, registerKey("example_feature"), ModFeatures.EXAMPLE_FEATURE, new ExampleFeatureConfig());
+        register(context, BLACKWOOD_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                // Tree trunk will be made of blackwood logs
+                BlockStateProvider.of(ModBlocks.BLACKWOOD_LOG),
+                // Tree trunk will be straight and vary in height
+                new StraightTrunkPlacer(5, 6, 3),
+
+                // Foliage (leaves) will be made of blackwood leaves
+                BlockStateProvider.of(ModBlocks.BLACKWOOD_LEAVES),
+                // Foliage (leaves) will be placed in a cherry-like fashion with custom parameters
+                // Standard:
+                // new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), ConstantIntProvider.create(3),
+                new CherryFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(1), ConstantIntProvider.create(5),
+                0.25f, 0.5f, 0.15f, 0.05f),
+
+                // Configures the size of the foliage
+                new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        // Add more configured features here
     }
 
     /**
