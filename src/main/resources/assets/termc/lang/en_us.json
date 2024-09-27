@@ -24,6 +24,11 @@
   "item.termc.fluorite_multitool": "Fluorite Multitool",
   "item.termc.fluorite_hammer": "Fluorite Hammer",
 
+  "item.termc.fluorite_helmet": "Fluorite Helmet",
+  "item.termc.fluorite_chestplate": "Fluorite Chestplate",
+  "item.termc.fluorite_leggings": "Fluorite Leggings",
+  "item.termc.fluorite_boots": "Fluorite Boots",
+
   "item.termc.strawberry":  "Strawberry",
   "item.termc.orange":  "Orange",
   "item.termc.mango": "Mango",
@@ -61,6 +66,7 @@
   "itemgroup.fluorite_blocks": "Fluorite Blocks",
   "itemgroup.food":  "Food",
   "itemgroup.tools": "Tools",
+  "itemgroup.fluorite_armor": "Fluorite Armor",
 
   "sounds.termc.chainsaw_cut": "Chainsaw cutting sound",
   "sounds.termc.chainsaw_pull": "Chainsaw pulling sound",

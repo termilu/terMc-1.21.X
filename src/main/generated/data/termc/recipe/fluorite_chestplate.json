@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "F": {
+      "item": "termc:fluorite"
+    }
+  },
+  "pattern": [
+    "F F",
+    "FFF"
+  ],
+  "result": {
+    "count": 1,
+    "id": "termc:fluorite_chestplate"
+  }
+}
