@@ -12,8 +12,8 @@ import net.termilu.termc.util.ModTags;
 import java.util.concurrent.CompletableFuture;
 
 public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
-    public ModItemTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture, FabricTagProvider.BlockTagProvider blockTagProvider) {
-        super(output, completableFuture, blockTagProvider);
+    public ModItemTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture) {
+        super(output, completableFuture);
     }
 
     //Generate Mod Item Tag jsons automatically
@@ -34,6 +34,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.BLACKWOOD_PLANKS.asItem());
 
         //Add Blackwood Logs to Blackwood Logs item
+        //Necessary for crafting recipes (offerPlanksRecipe)
         getOrCreateTagBuilder(ModTags.Items.BLACKWOOD_LOGS_ITEM)
                 .add(ModBlocks.BLACKWOOD_LOG.asItem(), ModBlocks.BLACKWOOD_WOOD.asItem(),
                         ModBlocks.STRIPPED_BLACKWOOD_LOG.asItem(), ModBlocks.STRIPPED_BLACKWOOD_WOOD.asItem());

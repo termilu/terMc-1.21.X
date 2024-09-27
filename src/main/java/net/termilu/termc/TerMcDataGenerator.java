@@ -14,7 +14,7 @@ public class TerMcDataGenerator implements DataGeneratorEntrypoint {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
 		pack.addProvider(ModBlockTagProvider::new);
-		pack.addProvider((output, registriesFuture) -> new ModItemTagProvider(output, registriesFuture, new ModBlockTagProvider(output, registriesFuture)));
+		pack.addProvider(ModItemTagProvider::new);
 		pack.addProvider(ModLootTableGenerator::new);
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModRecipeGenerator::new);

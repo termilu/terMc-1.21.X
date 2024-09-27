@@ -259,6 +259,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .offerTo(exporter);
 
         //Logs & Wood -> Planks
+        //Remember to create custom tags for the logs and the planks
         offerPlanksRecipe(exporter, ModBlocks.BLACKWOOD_PLANKS, ModTags.Items.BLACKWOOD_LOGS_ITEM, 4);
 
 
