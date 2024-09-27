@@ -152,25 +152,25 @@ public class ModItems {
 
     //Armor
     public static final Item FLUORITE_HELMET = registerItem("fluorite_helmet",
-            new ArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+            new ModArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
                     new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(22))
                             ));
     public static final Item FLUORITE_CHESTPLATE = registerItem("fluorite_chestplate",
-            new ArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+            new ModArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
                     new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(22))
                             ));
 
     public static final Item FLUORITE_LEGGINGS = registerItem("fluorite_leggings",
-            new ArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+            new ModArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
                     new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(22))
                             ));
 
     public static final Item FLUORITE_BOOTS = registerItem("fluorite_boots",
-            new ArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+            new ModArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(22))
                             ));
 
-    
+
 
 
 

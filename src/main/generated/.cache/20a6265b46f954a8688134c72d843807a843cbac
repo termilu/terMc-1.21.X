@@ -1,6 +1,6 @@
-// 1.21	2024-09-27T04:27:10.834831	terMc/Tags for minecraft:block
-bc5084787bb1ab39c535276c467b6af3f46e853b data\minecraft\tags\block\fence_gates.json
+// 1.21	2024-09-27T05:41:51.7002349	terMc/Tags for minecraft:block
 1ab965d842e0fdb8820455af9973161d216219e2 data\minecraft\tags\block\walls.json
+bc5084787bb1ab39c535276c467b6af3f46e853b data\minecraft\tags\block\fence_gates.json
 007ec9046b622f05c21d4084a9f81c6514fc88d4 data\minecraft\tags\block\mineable\pickaxe.json
 82362cfbd1836db13c7e9d36c8712821e795ac55 data\termc\tags\block\multitool_mineable.json
 007ec9046b622f05c21d4084a9f81c6514fc88d4 data\minecraft\tags\block\needs_iron_tool.json
