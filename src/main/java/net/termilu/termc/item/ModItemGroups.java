@@ -63,6 +63,14 @@ public class ModItemGroups {
                         entries.add(ModBlocks.FLUORITE_FENCE_GATE);
                         entries.add(ModBlocks.FLUORITE_WALL);
 
+                        entries.add(ModBlocks.BLACKWOOD_LOG);
+                        entries.add(ModBlocks.BLACKWOOD_WOOD);
+                        entries.add(ModBlocks.STRIPPED_BLACKWOOD_LOG);
+                        entries.add(ModBlocks.STRIPPED_BLACKWOOD_WOOD);
+                        entries.add(ModBlocks.BLACKWOOD_PLANKS);
+                        entries.add(ModBlocks.BLACKWOOD_LEAVES);
+                        entries.add(ModBlocks.BLACKWOOD_SAPLING);
+
                         //Redstone
                         entries.add(ModBlocks.FLUORITE_BUTTON);
                         entries.add(ModBlocks.FLUORITE_PRESSURE_PLATE);
@@ -110,6 +118,26 @@ public class ModItemGroups {
                         entries.add(ModItems.RAW_PINK_GARNET);
 
                         entries.add(ModItems.STAR_FRAGMENT);
+                        // Add new Items for Itemgroup fluorite here
+
+                    }).build());
+
+    public static final ItemGroup BUILDING_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(TerMc.MOD_ID, "building_blocks"),
+            // Build displayName of Itemgroup
+            FabricItemGroup.builder().displayName(Text.translatable("itemGroup.building_blocks"))
+                    // Build Icon of Itemgroup
+                    .icon(() -> new ItemStack(ModBlocks.BLACKWOOD_LOG)).entries((displayContext, entries) -> {
+                        entries.add(ModBlocks.BLACKWOOD_LOG);
+                        entries.add(ModBlocks.BLACKWOOD_WOOD);
+                        entries.add(ModBlocks.STRIPPED_BLACKWOOD_LOG);
+                        entries.add(ModBlocks.STRIPPED_BLACKWOOD_WOOD);
+                        entries.add(ModBlocks.BLACKWOOD_PLANKS);
+                        entries.add(ModBlocks.BLACKWOOD_LEAVES);
+                        entries.add(ModBlocks.BLACKWOOD_SAPLING);
+
+
+
                         // Add new Items for Itemgroup fluorite here
 
                     }).build());

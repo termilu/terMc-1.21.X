@@ -14,6 +14,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.termilu.termc.TerMc;
 import net.termilu.termc.block.custom.*;
+import net.termilu.termc.world.tree.ModSaplingGenerators;
 
 public class ModBlocks {
 
@@ -150,6 +151,36 @@ public class ModBlocks {
                     .dropsLike(ModBlocks.EMERALD_TORCH)
                     .pistonBehavior(PistonBehavior.DESTROY)));
 
+    //Tree Logs & Wood
+    public static final Block BLACKWOOD_LOG = registerBlock("blackwood_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG)
+                    .strength(3.0F)));
+
+    public static final Block BLACKWOOD_WOOD = registerBlock("blackwood_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD)
+                    .strength(3.0F)));
+
+    public static final Block STRIPPED_BLACKWOOD_LOG = registerBlock("stripped_blackwood_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG)
+                    .strength(3.0F)));
+
+    public static final Block STRIPPED_BLACKWOOD_WOOD = registerBlock("stripped_blackwood_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD)
+                    .strength(3.0F)));
+
+    //Planks & Leaves
+    public static final Block BLACKWOOD_PLANKS = registerBlock("blackwood_planks",
+            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)
+                    .strength(3.0F)));
+
+    public static final Block BLACKWOOD_LEAVES = registerBlock("blackwood_leaves",
+            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
+
+    //Saplings
+    public static final Block BLACKWOOD_SAPLING = registerBlock("blackwood_sapling",
+            new SaplingBlock(ModSaplingGenerators.BLACKWOOD, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
+
+    /////////////////////////////
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);

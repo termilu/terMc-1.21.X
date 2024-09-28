@@ -13,6 +13,7 @@ import net.minecraft.util.Identifier;
 import net.termilu.termc.TerMc;
 import net.termilu.termc.block.ModBlocks;
 import net.termilu.termc.item.ModItems;
+import net.termilu.termc.util.ModTags;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -256,5 +257,11 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 //Unlock recipe in recipe book if you pick up this items
                 .criterion(hasItem(ModItems.FLUORITE), conditionsFromItem(ModItems.FLUORITE))
                 .offerTo(exporter);
+
+        //Logs & Wood -> Planks
+        //Remember to create custom tags for the logs and the planks
+        offerPlanksRecipe(exporter, ModBlocks.BLACKWOOD_PLANKS, ModTags.Items.BLACKWOOD_LOGS_ITEM, 4);
+
+
     }
 }
