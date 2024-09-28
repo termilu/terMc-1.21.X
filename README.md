@@ -41,6 +41,8 @@ For the most part I'm following the "Fabric Modding for Minecraft 1.21.X" course
 
 ![Magic Block and Strawberry](https://github.com/termilu/terMc-1.21.X/blob/master/docs/gifs/magic_block_test.gif?raw=true)
 
+![Blackwood trees](https://raw.githubusercontent.com/termilu/terMc-1.21.X/master/docs/screenshots/blackwood_capybara_dodo.png)
+
 
 ## Acknowledgements
 
