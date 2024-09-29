@@ -1,3 +1,9 @@
-// 1.21	2024-09-29T05:52:06.6456602	terMc/World Gen
+// 1.21	2024-09-29T20:45:32.5304899	terMc/World Gen
 f2f71dd0b317bbaaf8ac3adc61931d25516ad59b data\termc\worldgen\configured_feature\blackwood_configured.json
+e35ceb42c5b439afea1e3db82ff7edb04fea292f data\termc\worldgen\placed_feature\fluorite_ore_placed.json
 8bd0d5b05508bab3f369c8e49f76ef67d1b09d1a data\termc\worldgen\placed_feature\blackwood_placed.json
+151eb186e9c319a618a0b5ed2e88fedc5f9c589a data\termc\worldgen\configured_feature\fluorite_ore_configured.json
+9ccd1358c88c8ba5f9904cef7994f97bda5e8021 data\termc\worldgen\placed_feature\end_fluorite_ore_placed.json
+bb0d6e7379491a7d8699af40fc8272cc82b17b84 data\termc\worldgen\configured_feature\nether_fluorite_ore_configured.json
+643e8cf09a00c02c9244bc681e5c821384087bdb data\termc\worldgen\placed_feature\nether_fluorite_ore_placed.json
+8d1a76297145d449ec9141f4066b97c628d75476 data\termc\worldgen\configured_feature\end_fluorite_ore_configured.json

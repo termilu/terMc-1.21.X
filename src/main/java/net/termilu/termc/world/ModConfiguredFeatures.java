@@ -1,14 +1,16 @@
 package net.termilu.termc.world;
 
+import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.structure.rule.BlockMatchRuleTest;
+import net.minecraft.structure.rule.RuleTest;
+import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.FeatureConfig;
-import net.minecraft.world.gen.feature.TreeFeatureConfig;
+import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.CherryFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
@@ -16,14 +18,21 @@ import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 import net.termilu.termc.TerMc;
 import net.termilu.termc.block.ModBlocks;
 
+import java.util.List;
+
 /**
  * Class responsible for registering custom configured features in the mod.
- * Handels how e.g. trees are going to look like.
+ * Handles how e.g. trees are going to look like.
  */
 public class ModConfiguredFeatures {
 
     // Registry key for the Blackwood tree feature
     public static final RegistryKey<ConfiguredFeature<?, ?>> BLACKWOOD_KEY = registerKey("blackwood_configured");
+
+    // Registry keys for various Fluorite ore features
+    public static final RegistryKey<ConfiguredFeature<?, ?>> FLUORITE_ORE_KEY = registerKey("fluorite_ore_configured");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> NETHER_FLUORITE_ORE_KEY = registerKey("nether_fluorite_ore_configured");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> END_FLUORITE_ORE_KEY = registerKey("end_fluorite_ore_configured");
 
     /**
      * Bootstraps the registration of configured features.
@@ -31,6 +40,7 @@ public class ModConfiguredFeatures {
      * @param context The registerable context for configured features.
      */
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
+        // Tree features
         register(context, BLACKWOOD_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 // Tree trunk will be made of blackwood logs
                 BlockStateProvider.of(ModBlocks.BLACKWOOD_LOG),
@@ -40,13 +50,36 @@ public class ModConfiguredFeatures {
                 // Foliage (leaves) will be made of blackwood leaves
                 BlockStateProvider.of(ModBlocks.BLACKWOOD_LEAVES),
                 // Foliage (leaves) will be placed in a cherry-like fashion with custom parameters
-                // Standard:
-                // new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), ConstantIntProvider.create(3),
                 new CherryFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(1), ConstantIntProvider.create(5),
                 0.25f, 0.5f, 0.15f, 0.05f),
 
                 // Configures the size of the foliage
                 new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        // Ore features
+        RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest deepslateReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
+        RuleTest netherReplaceables = new TagMatchRuleTest(BlockTags.BASE_STONE_NETHER);
+        RuleTest endReplaceables = new BlockMatchRuleTest(Blocks.END_STONE);
+
+        // Define targets for Fluorite ores in different dimensions
+        List<OreFeatureConfig.Target> overworldFluoriteOres = List.of(
+                OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.FLUORITE_ORE.getDefaultState()),
+                OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.FLUORITE_DEEPSLATE_ORE.getDefaultState())
+        );
+
+        List<OreFeatureConfig.Target> netherFluoriteOres = List.of(
+                OreFeatureConfig.createTarget(netherReplaceables, ModBlocks.FLUORITE_NETHER_ORE.getDefaultState())
+        );
+
+        List<OreFeatureConfig.Target> endFluoriteOres = List.of(
+                OreFeatureConfig.createTarget(endReplaceables, ModBlocks.FLUORITE_END_ORE.getDefaultState())
+        );
+
+        // Register Fluorite ore features with specified vein sizes
+        register(context, FLUORITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldFluoriteOres, 12)); // Size of the vein
+        register(context, NETHER_FLUORITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherFluoriteOres, 9)); // Size of the vein
+        register(context, END_FLUORITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(endFluoriteOres, 8)); // Size of the vein
 
         // Add more configured features here
     }
