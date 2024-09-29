@@ -58,6 +58,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.FENCE_GATES).add(ModBlocks.FLUORITE_FENCE_GATE);
         getOrCreateTagBuilder(BlockTags.WALLS).add(ModBlocks.FLUORITE_WALL);
 
+        getOrCreateTagBuilder(BlockTags.FENCES).add(ModBlocks.BLACKWOOD_FENCE);
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES).add(ModBlocks.BLACKWOOD_FENCE_GATE);
+        getOrCreateTagBuilder(BlockTags.WALLS).add(ModBlocks.BLACKWOOD_WALL);
+
         //Multitool TagBuilder to determine what it can mine
         getOrCreateTagBuilder(ModTags.Blocks.MULTITOOL_MINEABLE)
                 .forceAddTag(BlockTags.PICKAXE_MINEABLE)

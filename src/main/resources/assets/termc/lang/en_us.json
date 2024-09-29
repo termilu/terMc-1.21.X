@@ -63,11 +63,22 @@
   "block.termc.fluorite_button": "Fluorite Button",
   "block.termc.fluorite_pressure_plate": "Fluorite Pressure Plate",
 
+  "block.termc.blackwood_stairs": "Blackwood Stairs",
+  "block.termc.blackwood_slab": "Blackwood Slab",
+  "block.termc.blackwood_button": "Blackwood Button",
+  "block.termc.blackwood_pressure_plate": "Blackwood Pressure Plate",
+
   "block.termc.fluorite_fence": "Fluorite Fence",
   "block.termc.fluorite_fence_gate": "Fluorite Fence Gate",
   "block.termc.fluorite_wall": "Fluorite Wall",
   "block.termc.fluorite_door": "Fluorite Door",
   "block.termc.fluorite_trapdoor": "Fluorite Trapdoor",
+
+  "block.termc.blackwood_fence": "Blackwood Fence",
+  "block.termc.blackwood_fence_gate": "Blackwood Fence Gate",
+  "block.termc.blackwood_wall": "Blackwood Wall",
+  "block.termc.blackwood_door": "Blackwood Door",
+  "block.termc.blackwood_trapdoor": "Blackwood Trapdoor",
 
   "itemgroup.termc":  "terMc Items",
   "itemgroup.ore":  "Ores",

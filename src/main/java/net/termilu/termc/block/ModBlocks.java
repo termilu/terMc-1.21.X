@@ -18,6 +18,35 @@ import net.termilu.termc.world.tree.ModSaplingGenerators;
 
 public class ModBlocks {
 
+    //Tree Logs & Wood
+    public static final Block BLACKWOOD_LOG = registerBlock("blackwood_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG)
+                    .strength(3.0F)));
+
+    public static final Block BLACKWOOD_WOOD = registerBlock("blackwood_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD)
+                    .strength(3.0F)));
+
+    public static final Block STRIPPED_BLACKWOOD_LOG = registerBlock("stripped_blackwood_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG)
+                    .strength(3.0F)));
+
+    public static final Block STRIPPED_BLACKWOOD_WOOD = registerBlock("stripped_blackwood_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD)
+                    .strength(3.0F)));
+
+    //Planks & Leaves
+    public static final Block BLACKWOOD_PLANKS = registerBlock("blackwood_planks",
+            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)
+                    .strength(3.0F)));
+
+    public static final Block BLACKWOOD_LEAVES = registerBlock("blackwood_leaves",
+            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
+
+    //Saplings
+    public static final Block BLACKWOOD_SAPLING = registerBlock("blackwood_sapling",
+            new SaplingBlock(ModSaplingGenerators.BLACKWOOD, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
+
     //Create Fluorite Block with the Sounds of Amethyst Blocks, Strength = time to destroy, requiresTool still needs to
     //be specified to drop Item
     public static final Block FLUORITE_BLOCK = registerBlock("fluorite_block",
@@ -60,33 +89,59 @@ public class ModBlocks {
                     AbstractBlock.Settings.create().strength(2f)
                             .sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool()));
 
+    public static final Block BLACKWOOD_STAIRS = registerBlock("blackwood_stairs",
+            new StairsBlock(ModBlocks.BLACKWOOD_PLANKS.getDefaultState(),
+                    AbstractBlock.Settings.copy(Blocks.OAK_STAIRS).strength(2f)
+                            .sounds(BlockSoundGroup.WOOD)));
+
     //Slab doesnt need defaultState
     public static final Block FLUORITE_SLAB = registerBlock("fluorite_slab",
             new SlabBlock(AbstractBlock.Settings.create().strength(2f)
                     .sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool()));
+
+    public static final Block BLACKWOOD_SLAB = registerBlock("blackwood_slab",
+            new SlabBlock(AbstractBlock.Settings.copy(Blocks.OAK_STAIRS).strength(2f)
+                    .sounds(BlockSoundGroup.WOOD)));
 
     //Buttons
     public static final Block FLUORITE_BUTTON = registerBlock("fluorite_button",
             new ButtonBlock(BlockSetType.IRON, 10, AbstractBlock.Settings.create()
                     .sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool()));
 
+    public static final Block BLACKWOOD_BUTTON = registerBlock("blackwood_button",
+            new ButtonBlock(BlockSetType.OAK, 15, AbstractBlock.Settings.copy(Blocks.OAK_BUTTON)));
+
     //Pressure Plate
     public static final Block FLUORITE_PRESSURE_PLATE = registerBlock("fluorite_pressure_plate",
             new PressurePlateBlock(BlockSetType.IRON, AbstractBlock.Settings.create()
                     .sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool()));
+
+    public static final Block BLACKWOOD_PRESSURE_PLATE = registerBlock("blackwood_pressure_plate",
+            new PressurePlateBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_PRESSURE_PLATE)));
 
     //Fence & Walls
     public static final Block FLUORITE_FENCE = registerBlock("fluorite_fence",
             new FenceBlock(AbstractBlock.Settings.create()
                     .sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool()));
 
+    public static final Block BLACKWOOD_FENCE = registerBlock("blackwood_fence",
+            new FenceBlock(AbstractBlock.Settings.copy(Blocks.OAK_FENCE)));
+
     public static final Block FLUORITE_FENCE_GATE = registerBlock("fluorite_fence_gate",
             new FenceGateBlock(WoodType.OAK, AbstractBlock.Settings.create()
                     .sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool()));
 
+    public static final Block BLACKWOOD_FENCE_GATE = registerBlock("blackwood_fence_gate",
+            new FenceGateBlock(WoodType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_FENCE_GATE)));
+
+
     public static final Block FLUORITE_WALL = registerBlock("fluorite_wall",
             new WallBlock(AbstractBlock.Settings.create()
                     .sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool()));
+
+    public static final Block BLACKWOOD_WALL = registerBlock("blackwood_wall",
+            new WallBlock(AbstractBlock.Settings.copy(Blocks.STONE_BRICK_WALL)
+                    .sounds(BlockSoundGroup.WOOD)));
 
     //Doors & Trapdoors IMPORTANT: also add cutouts in TerMcClient
     public static final Block FLUORITE_DOOR = registerBlock("fluorite_door",
@@ -96,10 +151,20 @@ public class ModBlocks {
                     //.nonOpaque to prevent xray bug with doors & trapdoors
                     .nonOpaque()));
 
+    public static final Block BLACKWOOD_DOOR = registerBlock("blackwood_door",
+            new DoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_DOOR)
+                    //.nonOpaque to prevent xray bug with doors & trapdoors
+                    .nonOpaque()));
+
     public static final Block FLUORITE_TRAPDOOR = registerBlock("fluorite_trapdoor",
             //BlockSetType.IRON => cant open with hand
             new TrapdoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create()
                     .sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool()
+                    //.nonOpaque to prevent xray bug with doors & trapdoors
+                    .nonOpaque()));
+
+    public static final Block BLACKWOOD_TRAPDOOR = registerBlock("blackwood_trapdoor",
+            new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_TRAPDOOR)
                     //.nonOpaque to prevent xray bug with doors & trapdoors
                     .nonOpaque()));
 
@@ -151,34 +216,6 @@ public class ModBlocks {
                     .dropsLike(ModBlocks.EMERALD_TORCH)
                     .pistonBehavior(PistonBehavior.DESTROY)));
 
-    //Tree Logs & Wood
-    public static final Block BLACKWOOD_LOG = registerBlock("blackwood_log",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG)
-                    .strength(3.0F)));
-
-    public static final Block BLACKWOOD_WOOD = registerBlock("blackwood_wood",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD)
-                    .strength(3.0F)));
-
-    public static final Block STRIPPED_BLACKWOOD_LOG = registerBlock("stripped_blackwood_log",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG)
-                    .strength(3.0F)));
-
-    public static final Block STRIPPED_BLACKWOOD_WOOD = registerBlock("stripped_blackwood_wood",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD)
-                    .strength(3.0F)));
-
-    //Planks & Leaves
-    public static final Block BLACKWOOD_PLANKS = registerBlock("blackwood_planks",
-            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)
-                    .strength(3.0F)));
-
-    public static final Block BLACKWOOD_LEAVES = registerBlock("blackwood_leaves",
-            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
-
-    //Saplings
-    public static final Block BLACKWOOD_SAPLING = registerBlock("blackwood_sapling",
-            new SaplingBlock(ModSaplingGenerators.BLACKWOOD, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
 
     /////////////////////////////
 

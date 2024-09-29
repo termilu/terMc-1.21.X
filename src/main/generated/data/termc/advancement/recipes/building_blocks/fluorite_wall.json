@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_fluorite_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "termc:fluorite_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "termc:fluorite_wall"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_fluorite_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "termc:fluorite_wall"
+    ]
+  }
+}

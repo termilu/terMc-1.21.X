@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_blackwood_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "termc:blackwood_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "termc:blackwood_fence"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_blackwood_planks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "termc:blackwood_fence"
+    ]
+  }
+}

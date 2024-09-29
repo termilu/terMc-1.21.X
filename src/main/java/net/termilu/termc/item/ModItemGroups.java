@@ -71,11 +71,23 @@ public class ModItemGroups {
                         entries.add(ModBlocks.BLACKWOOD_LEAVES);
                         entries.add(ModBlocks.BLACKWOOD_SAPLING);
 
+                        entries.add(ModBlocks.BLACKWOOD_STAIRS);
+                        entries.add(ModBlocks.BLACKWOOD_SLAB);
+
+                        entries.add(ModBlocks.BLACKWOOD_FENCE);
+                        entries.add(ModBlocks.BLACKWOOD_FENCE_GATE);
+                        entries.add(ModBlocks.BLACKWOOD_WALL);
+
                         //Redstone
                         entries.add(ModBlocks.FLUORITE_BUTTON);
                         entries.add(ModBlocks.FLUORITE_PRESSURE_PLATE);
                         entries.add(ModBlocks.FLUORITE_DOOR);
                         entries.add(ModBlocks.FLUORITE_TRAPDOOR);
+
+                        entries.add(ModBlocks.BLACKWOOD_BUTTON);
+                        entries.add(ModBlocks.BLACKWOOD_PRESSURE_PLATE);
+                        entries.add(ModBlocks.BLACKWOOD_DOOR);
+                        entries.add(ModBlocks.BLACKWOOD_TRAPDOOR);
 
                         entries.add(ModBlocks.LAPIS_TORCH);
                         entries.add(ModBlocks.EMERALD_TORCH);
@@ -136,6 +148,17 @@ public class ModItemGroups {
                         entries.add(ModBlocks.BLACKWOOD_LEAVES);
                         entries.add(ModBlocks.BLACKWOOD_SAPLING);
 
+                        entries.add(ModBlocks.BLACKWOOD_STAIRS);
+                        entries.add(ModBlocks.BLACKWOOD_SLAB);
+
+                        entries.add(ModBlocks.BLACKWOOD_FENCE);
+                        entries.add(ModBlocks.BLACKWOOD_FENCE_GATE);
+                        entries.add(ModBlocks.BLACKWOOD_WALL);
+
+                        entries.add(ModBlocks.BLACKWOOD_BUTTON);
+                        entries.add(ModBlocks.BLACKWOOD_PRESSURE_PLATE);
+                        entries.add(ModBlocks.BLACKWOOD_DOOR);
+                        entries.add(ModBlocks.BLACKWOOD_TRAPDOOR);
 
 
                         // Add new Items for Itemgroup fluorite here
@@ -232,6 +255,11 @@ public class ModItemGroups {
                         entries.add(ModItems.EMERALD_TORCH);
                         entries.add(ModBlocks.MAGIC_BLOCK);
                         entries.add(ModBlocks.FLUORITE_LAMP);
+
+                        entries.add(ModBlocks.BLACKWOOD_BUTTON);
+                        entries.add(ModBlocks.BLACKWOOD_PRESSURE_PLATE);
+                        entries.add(ModBlocks.BLACKWOOD_DOOR);
+                        entries.add(ModBlocks.BLACKWOOD_TRAPDOOR);
 
 
                     }).build());
