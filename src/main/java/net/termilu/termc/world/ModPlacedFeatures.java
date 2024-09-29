@@ -5,7 +5,9 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
 import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 import net.termilu.termc.TerMc;
 import net.termilu.termc.block.ModBlocks;
@@ -14,12 +16,17 @@ import java.util.List;
 
 /**
  * Class responsible for registering custom placed features in the mod.
- * Handels how features are placed in the world.
+ * Handles how features are placed in the world.
  */
 public class ModPlacedFeatures {
 
     // Registry key for the Blackwood placed feature
     public static final RegistryKey<PlacedFeature> BLACKWOOD_PLACED_KEY = registerKey("blackwood_placed");
+
+    // Registry keys for various Fluorite ore placed features
+    public static final RegistryKey<PlacedFeature> FLUORITE_ORE_PLACED_KEY = registerKey("fluorite_ore_placed");
+    public static final RegistryKey<PlacedFeature> NETHER_FLUORITE_ORE_PLACED_KEY = registerKey("nether_fluorite_ore_placed");
+    public static final RegistryKey<PlacedFeature> END_FLUORITE_ORE_PLACED_KEY = registerKey("end_fluorite_ore_placed");
 
     /**
      * Bootstraps the registration of placed features.
@@ -30,7 +37,7 @@ public class ModPlacedFeatures {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, BLACKWOOD_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.BLACKWOOD_KEY),
-                //This method ensures that the tree will only be placed if it can survive in the given conditions.
+                // This method ensures that the tree will only be placed if it can survive in the given conditions.
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                         /*  Place 2 trees with a 10% chance of 2 extra trees.
                             IMPORTANT: 1 / extraChance parameter has to be an integer.
@@ -40,6 +47,41 @@ public class ModPlacedFeatures {
                             1 / 0.3 = 3.3333 -> Cannot be used
                         */
                         PlacedFeatures.createCountExtraModifier(2, 0.1f, 2), ModBlocks.BLACKWOOD_SAPLING));
+
+
+        register(context, FLUORITE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.FLUORITE_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(
+                        14, // How many veins per chunk
+                        // Height range
+                        HeightRangePlacementModifier.
+                                // Trapezoid => More ores in the middle height levels
+                                // trapezoid(YOffset.fixed(-80), YOffset.fixed(80))));
+
+                                // Uniform => Roughly the same amount of ores in each height level
+                                uniform(YOffset.fixed(-80), YOffset.fixed(80))));
+
+        register(context, NETHER_FLUORITE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.NETHER_FLUORITE_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(
+                        10, // How many veins per chunk
+                        // Height range
+                        HeightRangePlacementModifier.
+                                // Trapezoid => More ores in the middle height levels
+                                // trapezoid(YOffset.fixed(-80), YOffset.fixed(80))));
+
+                                // Uniform => Roughly the same amount of ores in each height level
+                                        uniform(YOffset.fixed(-80), YOffset.fixed(80))));
+
+        register(context, END_FLUORITE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.END_FLUORITE_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(
+                        8, // How many veins per chunk
+                        // Height range
+                        HeightRangePlacementModifier.
+                                // Trapezoid => More ores in the middle height levels
+                                // trapezoid(YOffset.fixed(-80), YOffset.fixed(80))));
+
+                                // Uniform => Roughly the same amount of ores in each height level
+                                        uniform(YOffset.fixed(-80), YOffset.fixed(80))));
+
 
         // Add more placed features here
     }

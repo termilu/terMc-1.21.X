@@ -1,4 +1,4 @@
-// 1.21	2024-09-29T05:52:06.640659	terMc/Model Definitions
+// 1.21	2024-09-29T20:45:32.523496	terMc/Model Definitions
 bcf854e2aece106ca796a0b31f3db6b2b71d819c assets\termc\models\item\raw_fluorite.json
 0fb1fbd85516f84f4f2184e406bd72f77d438cf2 assets\termc\models\block\magic_block.json
 885ee1c53cbe9936eadeaed49cfbe32db3137813 assets\termc\blockstates\fluorite_end_ore.json
@@ -35,15 +35,15 @@ caeeb839ad281004e12d131e698de127006ab802 assets\termc\models\block\blackwood_wal
 08848a99ebc19c8f2f324af19d9f2c321edd0f5c assets\termc\models\block\blackwood_fence_gate.json
 aa27e8385689ca8feeb9af07b4fedd35b43347ac assets\termc\models\block\fluorite_end_ore.json
 7200910b43b171f06f42726b203d00e6abe8dcbb assets\termc\models\block\blackwood_wall_side.json
-92c836db46d2d3c1b0047d5215b9b70fbe6cf7d2 assets\termc\blockstates\blackwood_wood.json
 26c3658d2dc5b6b48defb745ca85ad213daec205 assets\termc\blockstates\fluorite_wall.json
+92c836db46d2d3c1b0047d5215b9b70fbe6cf7d2 assets\termc\blockstates\blackwood_wood.json
 3a5e5283a162ec3147eeb3e22d1f56963e693016 assets\termc\models\block\fluorite_fence_side.json
 483cbbe3bf6157e7367c501fcff7fe5eafb91e1f assets\termc\models\block\fluorite_block.json
 a5d667fd25a7556fe42c7c8f7416953921e366de assets\termc\blockstates\blackwood_fence_gate.json
 c2024aa2944d9b33d44e905323b0700565db5778 assets\termc\models\item\fluorite_pickaxe.json
-daf296c5b1a737a816d2a9e2f18f62fc04aed899 assets\termc\models\block\blackwood_slab.json
 5e82d9227429ba38391020ef9ec12859f7994401 assets\termc\models\item\lapis_torch.json
 e3148892de6ea84161cb121be63889f171b70414 assets\termc\models\block\blackwood_button_pressed.json
+daf296c5b1a737a816d2a9e2f18f62fc04aed899 assets\termc\models\block\blackwood_slab.json
 5a6fbbd3dc868853cec18e713ceb1c7b82ce6255 assets\termc\models\block\fluorite_wall_inventory.json
 b4f64ddf8b098ff12e1ac40f1cd698afe24549ad assets\termc\models\item\blackwood_pressure_plate.json
 3cea47bc0de1a3dae66c74643e556939baf42152 assets\termc\models\block\stripped_blackwood_log.json
@@ -61,8 +61,8 @@ e9182a8aca261c66d899144615e73aff3dc3b42f assets\termc\models\item\fluorite_boots
 9bde10bb81d0bab52176e27ae9a7946b75af5e7f assets\termc\blockstates\blackwood_leaves.json
 b8d31b8281142262fccd56aa516e0cd3ba711e7e assets\termc\models\item\raw_pink_garnet.json
 8a8d785e18f934b434a8c79120c301eba2367627 assets\termc\models\item\fluorite_trapdoor.json
-bef873ab7789b9a32df61f3ffc13472b2c7ec063 assets\termc\models\block\fluorite_door_bottom_left.json
 d4f691b9cfeb0c53a4ad58b3564b6dd38fb184c7 assets\termc\models\block\fluorite_ore.json
+bef873ab7789b9a32df61f3ffc13472b2c7ec063 assets\termc\models\block\fluorite_door_bottom_left.json
 a6fe279b1f2715c3bc9e60ed440dd2c04820baab assets\termc\models\item\mango.json
 992b75473d05dcd9a5816298a728b1b4a1cc2c39 assets\termc\models\item\fluorite_helmet.json
 112c0685b3d885260802f1d63bf36875f7108cfb assets\termc\models\item\fluorite_block.json
@@ -142,8 +142,8 @@ a2ebef70d4fc0c6684979ec3d83b4747269ce50c assets\termc\models\block\fluorite_slab
 dbb38227ebcacdc8ea9f3eeb253191b1134b78a4 assets\termc\models\block\fluorite_door_top_left.json
 bf6f3a8182714f2c22356f7ebead76ea54decc4f assets\termc\blockstates\fluorite_button.json
 187655cb3c722ee1c51accfe4b8afb95ab0d49e5 assets\termc\models\block\blackwood_door_bottom_right_open.json
-34dc199d61b8d63820729d2d857b16bed182ecdb assets\termc\models\item\blackwood_leaves.json
 c47a0a2e453c3cb21f8d0b67c39fadabeaf137d9 assets\termc\models\block\blackwood_stairs_outer.json
+34dc199d61b8d63820729d2d857b16bed182ecdb assets\termc\models\item\blackwood_leaves.json
 dd554403b089d745dfbba93a55fa6ee3f9fda2b5 assets\termc\blockstates\blackwood_trapdoor.json
 0c649dd4905de0429c5fef1ce40314f9b9a4ec5d assets\termc\blockstates\fluorite_pressure_plate.json
 1ec02aa813507d80058b129379788ca7917f2dbb assets\termc\models\item\blackwood_fence_gate.json

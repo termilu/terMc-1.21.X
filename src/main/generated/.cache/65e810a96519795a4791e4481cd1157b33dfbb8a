@@ -1,10 +1,10 @@
-// 1.21	2024-09-29T05:52:06.6456602	terMc/Block Loot Tables
+// 1.21	2024-09-29T20:45:32.5304899	terMc/Block Loot Tables
 e2b5e007046dcff2c4ab4090a011f2b65ef72395 data\termc\loot_table\blocks\fluorite_stairs.json
 1b35117591a0cd8ee24268ef1ef27be3e409711e data\termc\loot_table\blocks\magic_block.json
 d2b98b4713eb3b63dbe005bbd7d14dbcff2be947 data\termc\loot_table\blocks\blackwood_trapdoor.json
 57a9d25b3100efbd3387db07b14b6225b3c66c27 data\termc\loot_table\blocks\blackwood_sapling.json
-255298e3370b392b557b1a4de19de9c0f6774f6f data\termc\loot_table\blocks\blackwood_wall.json
 9b5d85c792fe2f2cc7c624b94357266e9f104a64 data\termc\loot_table\blocks\fluorite_slab.json
+255298e3370b392b557b1a4de19de9c0f6774f6f data\termc\loot_table\blocks\blackwood_wall.json
 c302405c2564cae050e9d48b17c75a1e2a3b8523 data\termc\loot_table\blocks\fluorite_lamp.json
 5bc9d323db9c405ccf37cab8b525ef67af55194c data\termc\loot_table\blocks\fluorite_door.json
 734e6fa443c200cf506a484f4e2118e2e61e85fc data\termc\loot_table\blocks\blackwood_log.json
