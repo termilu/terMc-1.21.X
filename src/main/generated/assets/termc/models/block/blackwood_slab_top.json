@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "termc:block/blackwood_planks",
+    "side": "termc:block/blackwood_planks",
+    "top": "termc:block/blackwood_planks"
+  }
+}

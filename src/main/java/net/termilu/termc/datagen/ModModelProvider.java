@@ -21,6 +21,11 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool fluoriteTexturePool = blockStateModelGenerator
                 .registerCubeAllModelTexturePool(ModBlocks.FLUORITE_BLOCK);
 
+        BlockStateModelGenerator.BlockTexturePool blackwoodTexturePool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(ModBlocks.BLACKWOOD_PLANKS);
+
+        //blockStateModels
+
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FLUORITE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FLUORITE_DEEPSLATE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FLUORITE_NETHER_ORE);
@@ -32,19 +37,33 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTorch(ModBlocks.EMERALD_TORCH, ModBlocks.EMERALD_WALL_TORCH);
 
         //Generate derivables
+            //Fluorite
         fluoriteTexturePool.stairs(ModBlocks.FLUORITE_STAIRS);
         fluoriteTexturePool.slab(ModBlocks.FLUORITE_SLAB);
         fluoriteTexturePool.button(ModBlocks.FLUORITE_BUTTON);
         fluoriteTexturePool.pressurePlate(ModBlocks.FLUORITE_PRESSURE_PLATE);
+            //Blackwood
+        blackwoodTexturePool.stairs(ModBlocks.BLACKWOOD_STAIRS);
+        blackwoodTexturePool.slab(ModBlocks.BLACKWOOD_SLAB);
+        blackwoodTexturePool.button(ModBlocks.BLACKWOOD_BUTTON);
+        blackwoodTexturePool.pressurePlate(ModBlocks.BLACKWOOD_PRESSURE_PLATE);
 
-        //Fences, Fence gates and Walls need a custom BlockTag otherwise they won't connect
+        //Fences, Fence gates and Walls
+        // need a custom BlockTag otherwise they won't connect
         fluoriteTexturePool.fence(ModBlocks.FLUORITE_FENCE);
         fluoriteTexturePool.fenceGate(ModBlocks.FLUORITE_FENCE_GATE);
         fluoriteTexturePool.wall(ModBlocks.FLUORITE_WALL);
 
+        blackwoodTexturePool.fence(ModBlocks.BLACKWOOD_FENCE);
+        blackwoodTexturePool.fenceGate(ModBlocks.BLACKWOOD_FENCE_GATE);
+        blackwoodTexturePool.wall(ModBlocks.BLACKWOOD_WALL);
+
         //Doors & Trapdoors
         blockStateModelGenerator.registerDoor(ModBlocks.FLUORITE_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.FLUORITE_TRAPDOOR);
+
+        blockStateModelGenerator.registerDoor(ModBlocks.BLACKWOOD_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.BLACKWOOD_TRAPDOOR);
 
         //Logs
         blockStateModelGenerator.registerLog(ModBlocks.BLACKWOOD_LOG)
@@ -55,8 +74,6 @@ public class ModModelProvider extends FabricModelProvider {
                 .log(ModBlocks.STRIPPED_BLACKWOOD_LOG)
                 .wood(ModBlocks.STRIPPED_BLACKWOOD_WOOD);
 
-        //Planks
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLACKWOOD_PLANKS);
 
         //Leaves
         blockStateModelGenerator.registerSingleton(ModBlocks.BLACKWOOD_LEAVES, TexturedModel.LEAVES);

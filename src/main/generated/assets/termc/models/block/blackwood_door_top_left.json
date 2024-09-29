@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_left",
+  "textures": {
+    "bottom": "termc:block/blackwood_door_bottom",
+    "top": "termc:block/blackwood_door_top"
+  }
+}

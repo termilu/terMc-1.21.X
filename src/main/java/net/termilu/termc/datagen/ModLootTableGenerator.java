@@ -33,6 +33,8 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.FLUORITE_STAIRS);
 
+        addDrop(ModBlocks.BLACKWOOD_STAIRS);
+
         addDrop(ModBlocks.LAPIS_TORCH);
         addDrop(ModBlocks.EMERALD_TORCH);
 
@@ -54,13 +56,24 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.FLUORITE_SLAB, slabDrops(ModBlocks.FLUORITE_SLAB));
         addDrop(ModBlocks.FLUORITE_DOOR, doorDrops(ModBlocks.FLUORITE_DOOR));
 
+        addDrop(ModBlocks.BLACKWOOD_SLAB, slabDrops(ModBlocks.BLACKWOOD_SLAB));
+        addDrop(ModBlocks.BLACKWOOD_DOOR, doorDrops(ModBlocks.BLACKWOOD_DOOR));
+
         addDrop(ModBlocks.FLUORITE_TRAPDOOR);
         addDrop(ModBlocks.FLUORITE_BUTTON);
         addDrop(ModBlocks.FLUORITE_PRESSURE_PLATE);
 
+        addDrop(ModBlocks.BLACKWOOD_TRAPDOOR);
+        addDrop(ModBlocks.BLACKWOOD_BUTTON);
+        addDrop(ModBlocks.BLACKWOOD_PRESSURE_PLATE);
+
         addDrop(ModBlocks.FLUORITE_FENCE);
         addDrop(ModBlocks.FLUORITE_FENCE_GATE);
         addDrop(ModBlocks.FLUORITE_WALL);
+
+        addDrop(ModBlocks.BLACKWOOD_FENCE);
+        addDrop(ModBlocks.BLACKWOOD_FENCE_GATE);
+        addDrop(ModBlocks.BLACKWOOD_WALL);
 
 
         //Generate ore drops when mined, oreDrops(withSilkTouch, withoutSilkTouch)

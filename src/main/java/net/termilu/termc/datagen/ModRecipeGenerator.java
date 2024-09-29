@@ -7,6 +7,7 @@ import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
@@ -262,6 +263,85 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         //Remember to create custom tags for the logs and the planks
         offerPlanksRecipe(exporter, ModBlocks.BLACKWOOD_PLANKS, ModTags.Items.BLACKWOOD_LOGS_ITEM, 4);
 
+        //Slabs
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FLUORITE_SLAB, Ingredient.ofItems(ModItems.FLUORITE))
+                .criterion(hasItem(ModItems.FLUORITE), conditionsFromItem(ModItems.FLUORITE))
+                .offerTo(exporter);
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACKWOOD_SLAB, Ingredient.ofItems(ModBlocks.BLACKWOOD_PLANKS))
+                .criterion(hasItem(ModBlocks.BLACKWOOD_PLANKS), conditionsFromItem(ModBlocks.BLACKWOOD_PLANKS))
+                .offerTo(exporter);
+
+        //Stairs
+        createStairsRecipe(ModBlocks.FLUORITE_STAIRS, Ingredient.ofItems(ModItems.FLUORITE))
+                .criterion(hasItem(ModItems.FLUORITE), conditionsFromItem(ModItems.FLUORITE))
+                .offerTo(exporter);
+
+        createStairsRecipe(ModBlocks.BLACKWOOD_STAIRS, Ingredient.ofItems(ModBlocks.BLACKWOOD_PLANKS))
+                .criterion(hasItem(ModBlocks.BLACKWOOD_PLANKS), conditionsFromItem(ModBlocks.BLACKWOOD_PLANKS))
+                .offerTo(exporter);
+
+        //Doors
+        createDoorRecipe(ModBlocks.FLUORITE_DOOR, Ingredient.ofItems(ModItems.FLUORITE))
+                .criterion(hasItem(ModItems.FLUORITE), conditionsFromItem(ModItems.FLUORITE))
+                .offerTo(exporter);
+
+        createDoorRecipe(ModBlocks.BLACKWOOD_DOOR, Ingredient.ofItems(ModBlocks.BLACKWOOD_PLANKS))
+                .criterion(hasItem(ModBlocks.BLACKWOOD_PLANKS), conditionsFromItem(ModBlocks.BLACKWOOD_PLANKS))
+                .offerTo(exporter);
+
+
+        //Trapdoors
+        createTrapdoorRecipe(ModBlocks.FLUORITE_TRAPDOOR, Ingredient.ofItems(ModItems.FLUORITE))
+                .criterion(hasItem(ModItems.FLUORITE), conditionsFromItem(ModItems.FLUORITE))
+                .offerTo(exporter);
+
+        createTrapdoorRecipe(ModBlocks.BLACKWOOD_TRAPDOOR, Ingredient.ofItems(ModBlocks.BLACKWOOD_PLANKS))
+                .criterion(hasItem(ModBlocks.BLACKWOOD_PLANKS), conditionsFromItem(ModBlocks.BLACKWOOD_PLANKS))
+                .offerTo(exporter);
+
+        //Buttons
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.FLUORITE_BUTTON)
+                .input(ModItems.FLUORITE)
+                .criterion(hasItem(ModItems.FLUORITE), conditionsFromItem(ModItems.FLUORITE))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.BLACKWOOD_BUTTON)
+                .input(ModBlocks.BLACKWOOD_PLANKS)
+                .criterion(hasItem(ModBlocks.BLACKWOOD_PLANKS), conditionsFromItem(ModBlocks.BLACKWOOD_PLANKS))
+                .offerTo(exporter);
+
+        //Pressure Plates
+        createPressurePlateRecipe(RecipeCategory.REDSTONE,ModBlocks.FLUORITE_PRESSURE_PLATE, Ingredient.ofItems(ModItems.FLUORITE))
+                .criterion(hasItem(ModItems.FLUORITE), conditionsFromItem(ModItems.FLUORITE))
+                .offerTo(exporter);
+
+        createPressurePlateRecipe(RecipeCategory.REDSTONE,ModBlocks.BLACKWOOD_PRESSURE_PLATE, Ingredient.ofItems(ModBlocks.BLACKWOOD_PLANKS))
+                .criterion(hasItem(ModBlocks.BLACKWOOD_PLANKS), conditionsFromItem(ModBlocks.BLACKWOOD_PLANKS))
+                .offerTo(exporter);
+
+        //Fences
+        createFenceRecipe(ModBlocks.FLUORITE_FENCE, Ingredient.ofItems(ModItems.FLUORITE))
+                .criterion(hasItem(ModItems.FLUORITE), conditionsFromItem(ModItems.FLUORITE))
+                .offerTo(exporter);
+
+        createFenceRecipe(ModBlocks.BLACKWOOD_FENCE, Ingredient.ofItems(ModBlocks.BLACKWOOD_PLANKS))
+                .criterion(hasItem(ModBlocks.BLACKWOOD_PLANKS), conditionsFromItem(ModBlocks.BLACKWOOD_PLANKS))
+                .offerTo(exporter);
+
+        //Fence gates
+        createFenceGateRecipe(ModBlocks.FLUORITE_FENCE_GATE, Ingredient.ofItems(ModItems.FLUORITE))
+                .criterion(hasItem(ModItems.FLUORITE), conditionsFromItem(ModItems.FLUORITE))
+                .offerTo(exporter);
+
+        createFenceGateRecipe(ModBlocks.BLACKWOOD_FENCE_GATE, Ingredient.ofItems(ModBlocks.BLACKWOOD_PLANKS))
+                .criterion(hasItem(ModBlocks.BLACKWOOD_PLANKS), conditionsFromItem(ModBlocks.BLACKWOOD_PLANKS))
+                .offerTo(exporter);
+
+        //Walls
+        offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.FLUORITE_WALL, ModBlocks.FLUORITE_BLOCK);
+
+        offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACKWOOD_WALL, ModBlocks.BLACKWOOD_PLANKS);
 
     }
 }
