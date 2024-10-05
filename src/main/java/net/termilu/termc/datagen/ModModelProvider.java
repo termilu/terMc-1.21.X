@@ -137,6 +137,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ORANGE, Models.GENERATED);
         itemModelGenerator.register(ModItems.MANGO, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.SPEZI, Models.GENERATED);
+
         //Fuel
         itemModelGenerator.register(ModItems.STAR_FRAGMENT, Models.GENERATED);
     }

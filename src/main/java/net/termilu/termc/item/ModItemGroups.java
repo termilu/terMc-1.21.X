@@ -242,6 +242,8 @@ public class ModItemGroups {
                         entries.add(ModItems.ORANGE);
                         entries.add(ModItems.MANGO);
 
+                        entries.add(ModItems.SPEZI);
+
 
                     }).build());
 

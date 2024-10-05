@@ -87,6 +87,9 @@ public class ModItems {
         }
     });
 
+    //Drink
+    public static final Item SPEZI = registerItem("spezi", new SpeziItem(new Item.Settings()));
+
     //Fuel
     public static final Item STAR_FRAGMENT = registerItem("star_fragment", new Item(new Item.Settings()){
         @Override

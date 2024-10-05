@@ -1,9 +1,9 @@
-// 1.21	2024-09-29T20:45:32.5224936	terMc/Tags for minecraft:block
-f3eb188676436397ef66ff54b47e0cbe295a17af data\minecraft\tags\block\walls.json
-246aca3feb7560d2351525290bb864f11a4a5015 data\minecraft\tags\block\fence_gates.json
+// 1.21	2024-10-05T12:20:19.9514898	terMc/Tags for minecraft:block
 007ec9046b622f05c21d4084a9f81c6514fc88d4 data\minecraft\tags\block\mineable\pickaxe.json
+246aca3feb7560d2351525290bb864f11a4a5015 data\minecraft\tags\block\fence_gates.json
+f3eb188676436397ef66ff54b47e0cbe295a17af data\minecraft\tags\block\walls.json
 82362cfbd1836db13c7e9d36c8712821e795ac55 data\termc\tags\block\multitool_mineable.json
 007ec9046b622f05c21d4084a9f81c6514fc88d4 data\minecraft\tags\block\needs_iron_tool.json
-ac2c6c8b5536186a66577186f498bcefec43eef7 data\minecraft\tags\block\fences.json
 71a5b6272f8f945a0044adb38b3cf174bacfeccc data\minecraft\tags\block\logs_that_burn.json
 71a5b6272f8f945a0044adb38b3cf174bacfeccc data\termc\tags\block\blackwood_logs.json
+ac2c6c8b5536186a66577186f498bcefec43eef7 data\minecraft\tags\block\fences.json
